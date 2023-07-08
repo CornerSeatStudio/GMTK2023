@@ -33,8 +33,9 @@ public class StartMove : MonoBehaviour
             rb.AddTorque(torqueDirection * spinForce, ForceMode.Impulse);
             if (!following && Input.GetKeyDown(KeyCode.Space))
         {
-            virtualCamera.Follow = ball.transform;
-            following = true;
+                virtualCamera.Follow = ball.transform;
+                virtualCamera.LookAt = ball.transform;
+                following = true;
                 launched = true;
             }
         }

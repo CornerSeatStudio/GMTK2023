@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Pins
   - Gutter
+  - Ball
   layers:
   - Default
   - TransparentFX
