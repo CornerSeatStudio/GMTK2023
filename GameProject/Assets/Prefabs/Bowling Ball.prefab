@@ -153,3 +153,4 @@ MonoBehaviour:
   gutterForce: 10
   virtualCamera: {fileID: 0}
   ball: {fileID: 4565522774111330983}
+  cameraTarget: {fileID: 1858151410537548140, guid: c4dbd5076dd18304595ca8bbb917f88b, type: 3}
