@@ -34,6 +34,7 @@ public class LevelEditor : MonoBehaviour {
 
     }
 
+    //todo only on play mode
     public void AllToInactive()
     {
         while(placedPlaceables.Count > 0)
