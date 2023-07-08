@@ -11,6 +11,9 @@ public class LevelEditor : MonoBehaviour {
     [Header("PLACE LEVEL PLACEABLES HERE")]
     public List<Placeable> levelPlaceables;
 
+    [Header("Rotation Sensitivities")]
+    [Range(0.01f, 100f)] public float rotationSpeed = 10f;
+
     [Header("Info")]
     public List<Placeable> hotbarredPlaceables = new List<Placeable>();
     public Placeable activePlaceable;
@@ -80,6 +83,13 @@ public class LevelEditor : MonoBehaviour {
         if (activePlaceable != null)
         {
             MoveActiveToMousePos();
+            int rotationDir = Input.GetKey(KeyCode.Q) ? 1 : 0;
+            rotationDir += Input.GetKey(KeyCode.E) ? -1 : 0;
+            if (rotationDir != 0) {
+
+                activePlaceable.transform.Rotate(rotationDir * Vector3.up * rotationSpeed * Time.deltaTime, Space.World);
+            }
+
         }
 
         if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())

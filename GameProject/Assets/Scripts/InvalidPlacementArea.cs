@@ -10,42 +10,42 @@ public class InvalidPlacementArea : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        if (m_Collider != null)
-        {
-            Gizmos.color = Color.red;
+        //if (m_collider != null)
+        //{
+        //    gizmos.color = color.red;
 
-            // Calculate the bounds corners of the BoxCollider
-            Vector3 center = transform.position + m_Collider.center;
-            Vector3 size = m_Collider.size;
-            Vector3 halfSize = size / 2f;
+        //    // calculate the bounds corners of the boxcollider
+        //    vector3 center = transform.position + m_collider.center;
+        //    vector3 size = m_collider.size;
+        //    vector3 halfsize = size / 2f;
 
 
-            Vector3[] boundsCorners = new Vector3[8];
-            boundsCorners[0] = center + new Vector3(-halfSize.x, -halfSize.y, -halfSize.z);
-            boundsCorners[1] = center + new Vector3(-halfSize.x, -halfSize.y, halfSize.z);
-            boundsCorners[2] = center + new Vector3(halfSize.x, -halfSize.y, halfSize.z);
-            boundsCorners[3] = center + new Vector3(halfSize.x, -halfSize.y, -halfSize.z);
-            boundsCorners[4] = center + new Vector3(-halfSize.x, halfSize.y, -halfSize.z);
-            boundsCorners[5] = center + new Vector3(-halfSize.x, halfSize.y, halfSize.z);
-            boundsCorners[6] = center + new Vector3(halfSize.x, halfSize.y, halfSize.z);
-            boundsCorners[7] = center + new Vector3(halfSize.x, halfSize.y, -halfSize.z);
+        //    vector3[] boundscorners = new vector3[8];
+        //    boundscorners[0] = center + new vector3(-halfsize.x, -halfsize.y, -halfsize.z);
+        //    boundscorners[1] = center + new vector3(-halfsize.x, -halfsize.y, halfsize.z);
+        //    boundscorners[2] = center + new vector3(halfsize.x, -halfsize.y, halfsize.z);
+        //    boundscorners[3] = center + new vector3(halfsize.x, -halfsize.y, -halfsize.z);
+        //    boundscorners[4] = center + new vector3(-halfsize.x, halfsize.y, -halfsize.z);
+        //    boundscorners[5] = center + new vector3(-halfsize.x, halfsize.y, halfsize.z);
+        //    boundscorners[6] = center + new vector3(halfsize.x, halfsize.y, halfsize.z);
+        //    boundscorners[7] = center + new vector3(halfsize.x, halfsize.y, -halfsize.z);
 
-            // Draw the bounds edges using Gizmos.DrawLine
-            Gizmos.DrawLine(boundsCorners[0], boundsCorners[1]);
-            Gizmos.DrawLine(boundsCorners[1], boundsCorners[2]);
-            Gizmos.DrawLine(boundsCorners[2], boundsCorners[3]);
-            Gizmos.DrawLine(boundsCorners[3], boundsCorners[0]);
+        //    // draw the bounds edges using gizmos.drawline
+        //    gizmos.drawline(boundscorners[0], boundscorners[1]);
+        //    gizmos.drawline(boundscorners[1], boundscorners[2]);
+        //    gizmos.drawline(boundscorners[2], boundscorners[3]);
+        //    gizmos.drawline(boundscorners[3], boundscorners[0]);
 
-            Gizmos.DrawLine(boundsCorners[4], boundsCorners[5]);
-            Gizmos.DrawLine(boundsCorners[5], boundsCorners[6]);
-            Gizmos.DrawLine(boundsCorners[6], boundsCorners[7]);
-            Gizmos.DrawLine(boundsCorners[7], boundsCorners[4]);
+        //    gizmos.drawline(boundscorners[4], boundscorners[5]);
+        //    gizmos.drawline(boundscorners[5], boundscorners[6]);
+        //    gizmos.drawline(boundscorners[6], boundscorners[7]);
+        //    gizmos.drawline(boundscorners[7], boundscorners[4]);
 
-            Gizmos.DrawLine(boundsCorners[0], boundsCorners[4]);
-            Gizmos.DrawLine(boundsCorners[1], boundsCorners[5]);
-            Gizmos.DrawLine(boundsCorners[2], boundsCorners[6]);
-            Gizmos.DrawLine(boundsCorners[3], boundsCorners[7]);
-        }
+        //    gizmos.drawline(boundscorners[0], boundscorners[4]);
+        //    gizmos.drawline(boundscorners[1], boundscorners[5]);
+        //    gizmos.drawline(boundscorners[2], boundscorners[6]);
+        //    gizmos.drawline(boundscorners[3], boundscorners[7]);
+        //}
 
     }
 }

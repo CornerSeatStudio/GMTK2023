@@ -322,6 +322,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelEditor
       objectReference: {fileID: 0}
+    - target: {fileID: 6022022928372240712, guid: d6c84ac0f36b9b646859f14807826793, type: 3}
+      propertyPath: rotationSpeed
+      value: 60.4
+      objectReference: {fileID: 0}
     - target: {fileID: 8884226686499372889, guid: d6c84ac0f36b9b646859f14807826793, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -1678,5 +1682,5 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
