@@ -13,15 +13,49 @@ public class StartMove : MonoBehaviour
     public GameObject ball;
     public GameObject EditModeUI;
     public GameObject PlayModeUI;
-    private bool following = false;
     private bool launched = false;
     public CameraTargetBevahior cameraTarget;
-    // Start is called before the first frame update
-    void Start()
+
+    private LevelEditor levelEditor;
+
+
+    private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        levelEditor = FindObjectOfType<LevelEditor>();
+    }
+
+    void Start()
+    {
 
         rb.isKinematic = true;
+    }
+
+
+    public void OnSendLeBall()
+    {
+        //are all pins placed?
+        if (!levelEditor.AreAllPinsPlaced())
+        {
+            Debug.Log("NOT ALL PINS ARE PLACED, FLASH A UI THING HERE");
+
+            return;
+        }
+
+        //free the lad
+        rb.isKinematic = false;
+
+        //boot him away
+        Vector3 torqueDirection = transform.right;
+        rb.AddForce(Vector3.forward * launchForce, ForceMode.Impulse);
+        rb.AddTorque(torqueDirection * spinForce, ForceMode.Impulse);
+
+
+        cameraTarget.SetToTarget(gameObject);
+        launched = true;
+        EditModeUI.SetActive(false);
+        PlayModeUI.SetActive(true);
+        
     }
 
     // Update is called once per frame
@@ -29,21 +63,7 @@ public class StartMove : MonoBehaviour
     {
         if (!launched && Input.GetKeyDown(KeyCode.Space))
         {
-            rb.isKinematic = false;
-
-            Vector3 torqueDirection = transform.right;
-            rb.AddForce(Vector3.forward * launchForce, ForceMode.Impulse);
-            rb.AddTorque(torqueDirection * spinForce, ForceMode.Impulse);
-            if (!following && Input.GetKeyDown(KeyCode.Space))
-        {
-                // virtualCamera.Follow = ball.transform;
-                // virtualCamera.LookAt = ball.transform;
-                cameraTarget.SetToTarget(gameObject);
-                following = true;
-                launched = true;
-                EditModeUI.SetActive(false);
-                PlayModeUI.SetActive(true);
-            }
+            OnSendLeBall();
         }
     }
     void OnCollisionEnter(Collision collision)

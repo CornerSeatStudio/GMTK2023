@@ -20,6 +20,8 @@ public class HotbarSlot : MonoBehaviour, IPointerClickHandler
 
         if(placeable == hotbarParent.levelEditor.activePlaceable)
         {
+            //BUG HERE
+            Debug.Log("BUG?");
             hotbarParent.levelEditor.ActiveToInactive();
         } else
         {

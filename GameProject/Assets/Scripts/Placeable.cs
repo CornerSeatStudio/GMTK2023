@@ -4,11 +4,15 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Collider))]
+[RequireComponent(typeof(Rigidbody))]
 public class Placeable : MonoBehaviour
 {
 
-    [Header("Dependencies")]
-    public Collider col;
+    private Material invalidMat;
+    private Collider col;
+    private Rigidbody rb;
+    private MeshRenderer mr;
+    private Material ogMat;
 
     [Header("Props")]
     public Sprite spriteIcon;
@@ -22,11 +26,20 @@ public class Placeable : MonoBehaviour
     private void Awake()
     {
         col = GetComponent<Collider>();
+        rb = GetComponent<Rigidbody>();
+        mr = GetComponent<MeshRenderer>();
+        ogMat = mr.material;
+        invalidMat = FindObjectOfType<LevelEditor>().invalidMat;
     }
 
     private void Update()
     {
         col.isTrigger = inEditor;
+        rb.isKinematic = inEditor;
+        if (!inEditor)
+        {
+            mr.material = ogMat;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -34,6 +47,8 @@ public class Placeable : MonoBehaviour
         if(other.TryGetComponent<InvalidPlacementArea>(out _))
         {
             CanPlace = false;
+            if (invalidMat != null)
+                mr.material = invalidMat;
             //todo change color?
         }
     }
@@ -43,6 +58,9 @@ public class Placeable : MonoBehaviour
         if (other.TryGetComponent<InvalidPlacementArea>(out _))
         {
             CanPlace = true;
+            mr.material = ogMat;
+
+
         }
     }
 
