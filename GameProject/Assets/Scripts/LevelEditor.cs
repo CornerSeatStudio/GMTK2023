@@ -12,9 +12,9 @@ public class LevelEditor : MonoBehaviour {
     public List<Placeable> levelPlaceables;
 
     [Header("Info")]
-    public List<Placeable> hotbarredPlaceables; 
+    public List<Placeable> hotbarredPlaceables = new List<Placeable>();
     public Placeable activePlaceable;
-    public List<Placeable> placedPlaceables;
+    public List<Placeable> placedPlaceables = new List<Placeable>();
 
     private int ignoreFloor = 1 << 3;
 
@@ -43,9 +43,11 @@ public class LevelEditor : MonoBehaviour {
         }
 
         placeable.gameObject.SetActive(true);
-        
-        placedPlaceables.Remove(placeable); //note this won't always succeed
-        hotbarredPlaceables.Add(placeable);
+
+        if (placedPlaceables.Remove(placeable))
+        {
+            hotbarredPlaceables.Add(placeable);
+        }
 
         placeable.inEditor = true;
         activePlaceable = placeable;

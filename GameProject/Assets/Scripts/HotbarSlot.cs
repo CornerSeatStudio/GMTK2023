@@ -10,10 +10,10 @@ public class HotbarSlot : MonoBehaviour, IPointerClickHandler
     public Hotbar hotbarParent;
 
     public Placeable placeable;
-
+    private Image image;
     public void OnPointerClick(PointerEventData eventData)
     {
-        if(eventData.button != 0)
+        if(eventData.button != 0 || placeable == null)
         {
             return;
         }
@@ -31,17 +31,21 @@ public class HotbarSlot : MonoBehaviour, IPointerClickHandler
     private void Awake()
     {
         hotbarParent = GetComponentInParent<Hotbar>();
+        image = GetComponent<Image>();  
     }
 
     public void UpdateSlot(Placeable p)
     {
         placeable = p;
         //p.spriteIcon;
+        image.sprite = p.spriteIcon;
+        
     }
 
     public void EmptySlot()
     {
         placeable = null;
+        image.sprite = null;
 
     }
 

@@ -119,5 +119,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   col: {fileID: 0}
+  spriteIcon: {fileID: 21300000, guid: 62171da1f7c1eb64c87b6e2b8439229f, type: 3}
   inEditor: 1
   <CanPlace>k__BackingField: 1
