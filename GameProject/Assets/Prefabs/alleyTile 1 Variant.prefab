@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5754084199372789682, guid: 153290df5e2075c45a05201a06d328be, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1034416447649740426, guid: 55176fa59c1beb449be7410c16b79a8b, type: 3}
     - target: {fileID: 919132149155446097, guid: 153290df5e2075c45a05201a06d328be, type: 3}
       propertyPath: m_Name
       value: alleyTile 1 Variant
