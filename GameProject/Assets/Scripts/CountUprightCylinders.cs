@@ -7,7 +7,7 @@ public class CountUprightCylinders : MonoBehaviour
     private bool countdownStarted=false;
     private float countdownTimer=5f;
     private bool down;
-    public CinemachineVirtualCamera virtualCamera;
+    //public CinemachineVirtualCamera virtualCamera;
     void Update()
     {
         if (!down)
@@ -29,8 +29,8 @@ public class CountUprightCylinders : MonoBehaviour
         {
             countdownStarted=true;
             countdownTimer=1f;
-            virtualCamera.Follow=null;
-            virtualCamera.LookAt=null;
+           // virtualCamera.Follow=null;
+           // virtualCamera.LookAt=null;
             down = true;
         }
     }
