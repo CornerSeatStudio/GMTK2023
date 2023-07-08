@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Net;
@@ -7,41 +8,54 @@ using UnityEngine.EventSystems;
 
 public class LevelEditor : MonoBehaviour {
 
+    [Header("PLACE LEVEL PLACEABLES HERE")]
+    public List<Placeable> levelPlaceables;
+
     [Header("Info")]
-    public List<Placeable> inactivePlaceables; 
+    public List<Placeable> hotbarredPlaceables; 
     public Placeable activePlaceable;
     public List<Placeable> placedPlaceables;
 
     private int ignoreFloor = 1 << 3;
 
+
     void Start()
     {
-        
-        
+        foreach(Placeable levelPlaceable in levelPlaceables)
+        {
+            Placeable p = Instantiate(levelPlaceable);
+            hotbarredPlaceables.Add(p);
+            p.gameObject.SetActive(false);
+        }
+
     }
 
-    void ActiveToInactive(Placeable placeable)
+    public void ActiveToInactive()
     {
-        inactivePlaceables.Add(placeable);
-        placeable.gameObject.SetActive(false);
+        activePlaceable.gameObject.SetActive(false);
     }
 
-    void XToActive(Placeable placeable)
+    public void XToActive(Placeable placeable)
     {
+        if(activePlaceable != null)
+        {
+            ActiveToInactive();
+        }
+
         placeable.gameObject.SetActive(true);
-        //note only one list will have it
-        inactivePlaceables.Remove(placeable);
-        placedPlaceables.Remove(placeable);
-
+        
+        placedPlaceables.Remove(placeable); //note this won't always succeed
+        hotbarredPlaceables.Add(placeable);
 
         placeable.inEditor = true;
         activePlaceable = placeable;
 
     }
 
-    void ActiveToFixed()
+    public void ActiveToFixed()
     {
         placedPlaceables.Add(activePlaceable);
+        hotbarredPlaceables.Remove(activePlaceable);
         activePlaceable.inEditor = false;
         activePlaceable = null;
     }
@@ -66,7 +80,7 @@ public class LevelEditor : MonoBehaviour {
             MoveActiveToMousePos();
         }
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
         {
             if (activePlaceable == null)
             {

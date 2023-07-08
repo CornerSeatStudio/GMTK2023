@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(Collider))]
 public class Placeable : MonoBehaviour
@@ -8,6 +9,9 @@ public class Placeable : MonoBehaviour
 
     [Header("Dependencies")]
     public Collider col;
+
+    [Header("Props")]
+    public Sprite spriteIcon;
 
     [Header("Info")]
     public bool inEditor = true;

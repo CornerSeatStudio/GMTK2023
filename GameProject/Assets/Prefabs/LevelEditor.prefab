@@ -44,5 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99031392ab26e284caa4f5d5ecead447, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  placeables: []
+  levelPlaceables: []
+  hotbarredPlaceables: []
   activePlaceable: {fileID: 0}
+  placedPlaceables: []
