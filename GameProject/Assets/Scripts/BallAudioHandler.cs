@@ -25,25 +25,39 @@ public class BallAudioHandler : MonoBehaviour
     {
         m_AudioSource.loop = true;
     }
-    bool IsRolling => ball.launched;
-    bool audioTrigger = true;
+
+    private void OnEnable()
+    {
+        ball.OnPlayEvent += OnPlay;
+    }
+
+    private void OnDisable()
+    {
+        ball.OnPlayEvent -= OnPlay;
+
+    }
+
     IEnumerator audioRoutine;
     private void Update()
     {
-        if(!IsRolling || rb.velocity.sqrMagnitude < stopClipSpeedThreshold)
+
+        if (!ball.launched) //todo threshold to stop sound
         {
             if(audioRoutine != null)
             {
                 StopCoroutine(audioRoutine);
+                m_AudioSource.Stop();
+                audioRoutine = null;
+
             }
-            m_AudioSource.Stop();
-            audioTrigger = true;
-        } else if (audioTrigger)
-        {
-            StartCoroutine(AudioRoutine());
-            audioTrigger = false;
         }
-        
+
+    }
+
+    void OnPlay()
+    {
+        audioRoutine = AudioRoutine();
+        StartCoroutine(audioRoutine);
     }
 
     IEnumerator AudioRoutine()
@@ -54,11 +68,6 @@ public class BallAudioHandler : MonoBehaviour
         m_AudioSource.Play();
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if(collision.collider.TryGetComponent<Pin>(out Pin pin))
-        {
-            pin.audioSouce.PlayOneShot(bangPin);
-        }
-    }
+    
+    
 }

@@ -24,6 +24,17 @@ public class ObjectResetter : MonoBehaviour
         }
     }
 
+    private void OnEnable()
+    {
+        ball.OnPlayEvent += SaveHistory;
+    }
+
+    private void OnDisable()
+    {
+        ball.OnPlayEvent -= SaveHistory;
+
+    }
+
     private void Awake()
     {
         levelEditor = FindObjectOfType<LevelEditor>();
@@ -31,6 +42,12 @@ public class ObjectResetter : MonoBehaviour
 
 
     public void OnPlay()
+    {
+        SaveHistory();
+        ball.OnSendLeBall();
+    }
+
+    public void SaveHistory()
     {
         resetTransformData.Clear();
 
@@ -46,9 +63,6 @@ public class ObjectResetter : MonoBehaviour
         {
             resetTransformData.Add(p.gameObject, new TransformData(p.transform.position, p.transform.rotation));
         }
-
-        ball.OnSendLeBall();
-
     }
 
     public void OnReset()

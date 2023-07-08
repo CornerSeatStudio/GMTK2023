@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
+using System;
+
 public class StartMove : MonoBehaviour
 {
     public Rigidbody rb;
@@ -18,6 +20,8 @@ public class StartMove : MonoBehaviour
 
     private LevelEditor levelEditor;
     private ObjectResetter resetter;
+
+    public event Action OnPlayEvent;
 
 
     private void Awake()
@@ -37,6 +41,9 @@ public class StartMove : MonoBehaviour
 
     public void OnSendLeBall()
     {
+
+        OnPlayEvent?.Invoke();
+
         //are all pins placed?
         if (levelEditor != null && !levelEditor.AreAllPinsPlaced())
         {
@@ -71,10 +78,7 @@ public class StartMove : MonoBehaviour
     {
         if (!launched && Input.GetKeyDown(KeyCode.Space))
         {
-            if (resetter != null)
-            {
-                resetter.OnPlay();
-            }
+
             OnSendLeBall();
         }
     }

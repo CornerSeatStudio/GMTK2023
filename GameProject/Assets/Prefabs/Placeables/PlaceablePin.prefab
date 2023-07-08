@@ -131,6 +131,10 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4846798135597617273, guid: 442faff5eb579af4aa6c535ee0f917ac, type: 3}
+      propertyPath: fallenSoundEffect
+      value: 
+      objectReference: {fileID: 8300000, guid: 361fd3db0be60054e83eaed01a282902, type: 3}
     - target: {fileID: 7808510860722395850, guid: 442faff5eb579af4aa6c535ee0f917ac, type: 3}
       propertyPath: m_Name
       value: PlaceablePin
