@@ -11,6 +11,7 @@ public class StartMove : MonoBehaviour
     public float gutterForce = 10f;
     public CinemachineVirtualCamera virtualCamera;
     public GameObject ball;
+    public GameObject UIObject;
     private bool following = false;
     private bool launched = false;
     public CameraTargetBevahior cameraTarget;
@@ -39,6 +40,7 @@ public class StartMove : MonoBehaviour
                 cameraTarget.SetToTarget(gameObject);
                 following = true;
                 launched = true;
+                UIObject.SetActive(false);
             }
         }
     }
