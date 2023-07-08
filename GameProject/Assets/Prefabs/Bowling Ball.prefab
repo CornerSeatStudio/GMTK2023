@@ -28,14 +28,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4565522774111330983}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.1, y: 2.84, z: -5.69}
+  m_LocalRotation: {x: 0, y: 0.026176924, z: 0, w: 0.99965733}
+  m_LocalPosition: {x: 3.35, y: 2.09, z: 3.38}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 3, z: 0}
 --- !u!33 &3719527324420233894
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -115,9 +115,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4565522774111330983}
   serializedVersion: 4
-  m_Mass: 5
-  m_Drag: 0.05
-  m_AngularDrag: 0.05
+  m_Mass: 10
+  m_Drag: 0
+  m_AngularDrag: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -147,10 +147,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 5880728173473690736}
-  launchForce: 20
-  spinForce: 9
+  launchForce: 100
+  spinForce: 10
   collisionForce: 2
-  gutterForce: 10
-  virtualCamera: {fileID: 0}
+  gutterForce: 30
   ball: {fileID: 4565522774111330983}
-  cameraTarget: {fileID: 1858151410537548140, guid: c4dbd5076dd18304595ca8bbb917f88b, type: 3}
+  EditModeUI: {fileID: 0}
+  PlayModeUI: {fileID: 0}
+  cameraTarget: {fileID: 0}

@@ -165,6 +165,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteIcon: {fileID: 21300000, guid: 274fb2ec16d1ef14cb3091f02e3495aa, type: 3}
-  heightOffset: 0.1
+  heightOffset: 0.05
   inEditor: 1
   <CanPlace>k__BackingField: 1
