@@ -59,6 +59,7 @@ public class ObjectResetter : MonoBehaviour
 
         ball.transform.position = initBallTransform.position;
         ball.transform.rotation = initBallTransform.rotation;
+        ball.GetComponent<StartMove>().launched = false;
 
         foreach(var (go, t) in resetTransformData)
         {
