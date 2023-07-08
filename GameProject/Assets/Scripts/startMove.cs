@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Cinemachine;
 public class startMove : MonoBehaviour
 {
     public Rigidbody rb;
@@ -9,11 +9,14 @@ public class startMove : MonoBehaviour
     public float spinForce=1f;
     public float collisionForce = 2f;
     public float gutterForce = 10f;
+    public CinemachineVirtualCamera virtualCamera;
+    public GameObject ball;
+    private bool following = false;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        transform.position = new Vector3(transform.position.x, 1, transform.position.z);
+
         rb.useGravity = false;
     }
 
@@ -27,6 +30,11 @@ public class startMove : MonoBehaviour
             Vector3 torqueDirection = transform.right;
             rb.AddForce(Vector3.forward * launchForce, ForceMode.Impulse);
             rb.AddTorque(torqueDirection * spinForce, ForceMode.Impulse);
+            if (!following && Input.GetKeyDown(KeyCode.Space))
+        {
+            virtualCamera.Follow = ball.transform;
+            following = true;
+        }
         }
     }
     void OnCollisionEnter(Collision collision)
