@@ -48,6 +48,7 @@ public class ObjectResetter : MonoBehaviour
         }
 
         ball.OnSendLeBall();
+
     }
 
     public void OnReset()
@@ -61,6 +62,10 @@ public class ObjectResetter : MonoBehaviour
 
         foreach(var (go, t) in resetTransformData)
         {
+            if(go.TryGetComponent<Rigidbody>(out rb)){
+                rb.isKinematic = true;
+                rb.isKinematic = false;
+            }
             go.transform.position = t.position;
             go.transform.rotation = t.rotation;
         }

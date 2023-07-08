@@ -34,7 +34,7 @@ public class LevelEditor : MonoBehaviour {
 
     }
 
-    public bool AreAllPinsPlaced() => !hotbarredPlaceables.Any(p => p.TryGetComponent<Pin>(out _));
+    public bool AreAllPinsPlaced() => hotbarredPlaceables.Count == 0 || !hotbarredPlaceables.Any(p => p.TryGetComponent<Pin>(out _));
 
 
     //todo only on play mode
