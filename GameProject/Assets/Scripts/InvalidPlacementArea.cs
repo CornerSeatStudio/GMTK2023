@@ -15,7 +15,7 @@ public class InvalidPlacementArea : MonoBehaviour
             Gizmos.color = Color.red;
 
             // Calculate the bounds corners of the BoxCollider
-            Vector3 center = transform.position;
+            Vector3 center = transform.position + m_Collider.center;
             Vector3 size = m_Collider.size;
             Vector3 halfSize = size / 2f;
 
