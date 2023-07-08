@@ -12,6 +12,7 @@ public class StartMove : MonoBehaviour
     public CinemachineVirtualCamera virtualCamera;
     public GameObject ball;
     private bool following = false;
+    private bool launched = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +24,7 @@ public class StartMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (!launched && Input.GetKeyDown(KeyCode.Space))
         {
             rb.useGravity = true;
 
@@ -34,7 +35,8 @@ public class StartMove : MonoBehaviour
         {
             virtualCamera.Follow = ball.transform;
             following = true;
-        }
+                launched = true;
+            }
         }
     }
     void OnCollisionEnter(Collision collision)
