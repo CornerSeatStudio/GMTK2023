@@ -45,19 +45,19 @@ public class CameraTargetBevahior : MonoBehaviour
             }
             if (Input.GetKey(KeyCode.W))
             {
-                print("wmove");
+                
                 if (transform.position.x > upperBound.transform.position.x)
                 {
-                    print("wmove");
+                    
                     transform.position -= new Vector3(movespeed * Time.deltaTime, 0f, 0f);
                 }
             }
             if (Input.GetKey(KeyCode.S))
             {
-                print("Smove");
+                
                 if (transform.position.x < lowerBound.transform.position.x)
                 {
-                    print("Smove");
+                    
                     transform.position += new Vector3(movespeed * Time.deltaTime, 0f, 0f);
                 }
             }
@@ -85,12 +85,12 @@ public class CameraTargetBevahior : MonoBehaviour
         if (isOrtho)
         {
             transform.rotation = Quaternion.Euler(35f, -120f, 0f);
-            background.transform.localScale = new Vector3(1.143641f, 9f, 9f);
+            background.transform.localScale = new Vector3(1.5f, 9f, 9f);
         }
         else
         {
             transform.rotation = Quaternion.Euler(35f, -90f, 0f);
-            background.transform.localScale = new Vector3(4.574565f, 9f, 9f);
+            background.transform.localScale = new Vector3(4.34f, 9f, 9f);
         }
     }
 }

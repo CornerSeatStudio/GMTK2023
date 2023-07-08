@@ -97,7 +97,7 @@ Transform:
   - {fileID: 3511184567632370275}
   - {fileID: 8085424127337651008}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5828772849618184547
 GameObject:
@@ -346,7 +346,7 @@ PrefabInstance:
       objectReference: {fileID: 202618931945680168}
     - target: {fileID: 1858151410537548140, guid: c4dbd5076dd18304595ca8bbb917f88b, type: 3}
       propertyPath: movespeed
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1858151410537548140, guid: c4dbd5076dd18304595ca8bbb917f88b, type: 3}
       propertyPath: background
@@ -366,7 +366,7 @@ PrefabInstance:
       objectReference: {fileID: 7258124669346346180}
     - target: {fileID: 2053049097350524788, guid: c4dbd5076dd18304595ca8bbb917f88b, type: 3}
       propertyPath: m_Lens.OrthographicSize
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3895441880500674020, guid: c4dbd5076dd18304595ca8bbb917f88b, type: 3}
       propertyPath: m_RootOrder
@@ -424,13 +424,21 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -14.802746
       objectReference: {fileID: 0}
+    - target: {fileID: 5213369137472225226, guid: c4dbd5076dd18304595ca8bbb917f88b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213369137472225226, guid: c4dbd5076dd18304595ca8bbb917f88b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6229693844212206131, guid: c4dbd5076dd18304595ca8bbb917f88b, type: 3}
       propertyPath: orthographic
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6229693844212206131, guid: c4dbd5076dd18304595ca8bbb917f88b, type: 3}
       propertyPath: orthographic size
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6229693844212206131, guid: c4dbd5076dd18304595ca8bbb917f88b, type: 3}
       propertyPath: m_OcclusionCulling
