@@ -2,8 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
-using UnityEditor.PackageManager.Requests;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -12,19 +10,20 @@ public class LevelEditor : MonoBehaviour {
     [Header("PLACE LEVEL PLACEABLES HERE")]
     public List<Placeable> levelPlaceables;
 
-    [Header("Rotation Sensitivities")]
     [Range(0.01f, 100f)] public float rotationSpeed = 10f;
+    public Material invalidMat;
 
     [Header("Info")]
     public List<Placeable> hotbarredPlaceables = new List<Placeable>();
     public Placeable activePlaceable;
     public List<Placeable> placedPlaceables = new List<Placeable>();
 
-    private int ignoreFloor = 1 << 3;
+    private int floorLayer = 1 << 3;
 
 
     void Start()
     {
+
         foreach(Placeable levelPlaceable in levelPlaceables)
         {
             Placeable p = Instantiate(levelPlaceable);
@@ -32,7 +31,11 @@ public class LevelEditor : MonoBehaviour {
             p.gameObject.SetActive(false);
         }
 
+
     }
+
+    public bool AreAllPinsPlaced() => !hotbarredPlaceables.Any(p => p.TryGetComponent<Pin>(out _));
+
 
     //todo only on play mode
     public void AllToInactive()
@@ -48,6 +51,8 @@ public class LevelEditor : MonoBehaviour {
     public void ActiveToInactive()
     {
         activePlaceable.gameObject.SetActive(false);
+        activePlaceable = null;
+
     }
 
     public void XToActive(Placeable placeable)
@@ -81,11 +86,14 @@ public class LevelEditor : MonoBehaviour {
     {
         Ray castPoint = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
-        if (Physics.Raycast(castPoint, out hit, Mathf.Infinity, ignoreFloor))
+        if (Physics.Raycast(castPoint, out hit, Mathf.Infinity, floorLayer))
         {
 
             Vector3 placePos = hit.point + Vector3.up * activePlaceable.heightOffset; //todo adjust placepos height
             activePlaceable.transform.position = placePos;
+        } else
+        {
+            activePlaceable.transform.position = Vector3.down * 999f; //to narnia
         }
     }
 
@@ -110,14 +118,24 @@ public class LevelEditor : MonoBehaviour {
             {
                 Ray castPoint = Camera.main.ScreenPointToRay(Input.mousePosition);
                 RaycastHit hit;
-                if (Physics.Raycast(castPoint, out hit, Mathf.Infinity) && hit.collider.TryGetComponent<Placeable>(out Placeable placeable))
+                if (Physics.Raycast(castPoint, out hit, Mathf.Infinity))
                 {
-                    XToActive(placeable);
+                    if(hit.collider.TryGetComponent<Placeable>(out Placeable placeable))
+                    {
+                        //Debug.Log("RAYCASTED");
+                        XToActive(placeable);
+                    }
+                    
                 }
             }
             else if (activePlaceable.CanPlace)
             {
-                ActiveToFixed();
+                Ray castPoint = Camera.main.ScreenPointToRay(Input.mousePosition);
+                if (Physics.Raycast(castPoint, out _, Mathf.Infinity, floorLayer))
+                {
+                    ActiveToFixed();
+                }
+                
 
             }
         }

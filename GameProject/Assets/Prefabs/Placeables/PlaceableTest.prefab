@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2792615749123847558}
   - component: {fileID: 1298858703202797876}
   - component: {fileID: 1550588545201279029}
+  - component: {fileID: 82637747789056156}
   m_Layer: 0
   m_Name: PlaceableTest
   m_TagString: Untagged
@@ -118,7 +119,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3766faf85c07d345b6d8c583a13fdea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  col: {fileID: 0}
+  invalidMat: {fileID: 2100000, guid: 679397cfa291d2146a7aff3f907f1699, type: 2}
   spriteIcon: {fileID: 21300000, guid: 62171da1f7c1eb64c87b6e2b8439229f, type: 3}
+  heightOffset: 0
   inEditor: 1
   <CanPlace>k__BackingField: 1
+--- !u!54 &82637747789056156
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4502982040588612130}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

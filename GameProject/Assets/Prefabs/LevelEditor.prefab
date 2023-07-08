@@ -30,7 +30,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6022022928372240712
 MonoBehaviour:
@@ -51,6 +51,8 @@ MonoBehaviour:
   - {fileID: 5531215258146223930, guid: c67c62f09e9755e4dbc5cb1326096319, type: 3}
   - {fileID: 5531215258146223930, guid: c67c62f09e9755e4dbc5cb1326096319, type: 3}
   - {fileID: 1550588545201279029, guid: f107d87110be1cf4cba81b7e0727becd, type: 3}
+  rotationSpeed: 10
+  invalidMat: {fileID: 2100000, guid: 679397cfa291d2146a7aff3f907f1699, type: 2}
   hotbarredPlaceables: []
   activePlaceable: {fileID: 0}
   placedPlaceables: []

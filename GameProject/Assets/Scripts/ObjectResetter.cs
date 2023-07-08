@@ -32,6 +32,8 @@ public class ObjectResetter : MonoBehaviour
 
     public void OnPlay()
     {
+        resetTransformData.Clear();
+
         initBallTransform.position = ball.transform.position;
         initBallTransform.rotation = ball.transform.rotation;
 
@@ -44,6 +46,8 @@ public class ObjectResetter : MonoBehaviour
         {
             resetTransformData.Add(p.gameObject, new TransformData(p.transform.position, p.transform.rotation));
         }
+
+        ball.OnSendLeBall();
     }
 
     public void OnReset()
@@ -60,5 +64,8 @@ public class ObjectResetter : MonoBehaviour
             go.transform.position = t.position;
             go.transform.rotation = t.rotation;
         }
+
+        ball.EditModeUI.SetActive(true);
+        ball.PlayModeUI.SetActive(false);
     }
 }
