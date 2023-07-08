@@ -746,6 +746,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3187874120396073491, guid: a777bb49f2111fa45a7e428a79d95880, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 51.79
+      objectReference: {fileID: 0}
     - target: {fileID: 4127576832290617598, guid: a777bb49f2111fa45a7e428a79d95880, type: 3}
       propertyPath: m_Name
       value: CameraPackage
@@ -836,7 +840,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6c84ac0f36b9b646859f14807826793, type: 3}
---- !u!1001 &1302545833
+--- !u!1001 &1314381901
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -858,7 +862,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4827703759752559427, guid: 16f606f3631cd5d4cb9324cd0e3e22d5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.09
+      value: 1.74
       objectReference: {fileID: 0}
     - target: {fileID: 4827703759752559427, guid: 16f606f3631cd5d4cb9324cd0e3e22d5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -891,6 +895,14 @@ PrefabInstance:
     - target: {fileID: 4827703759752559427, guid: 16f606f3631cd5d4cb9324cd0e3e22d5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5609567927828095349, guid: 16f606f3631cd5d4cb9324cd0e3e22d5, type: 3}
+      propertyPath: spinForce
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5609567927828095349, guid: 16f606f3631cd5d4cb9324cd0e3e22d5, type: 3}
+      propertyPath: launchForce
+      value: 150
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
