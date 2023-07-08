@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6620539502851163906}
   - component: {fileID: 8486071332641036852}
   - component: {fileID: 6351786948873400815}
+  - component: {fileID: 5628778865876206450}
   m_Layer: 0
   m_Name: 'Larger Pins '
   m_TagString: Pins
@@ -149,3 +150,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uprightThreshold: 3
+--- !u!64 &5628778865876206450
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1064906773242300109}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6849795856638667086, guid: 2a8f41496eec82b47a2d649ebce3a415, type: 3}

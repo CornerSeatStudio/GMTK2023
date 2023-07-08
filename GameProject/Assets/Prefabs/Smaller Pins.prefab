@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 3785414231780808927}
   - component: {fileID: 5968073328719377494}
   - component: {fileID: 2081520112233067636}
-  - component: {fileID: 7903174346993312548}
   - component: {fileID: 2589976363299972608}
   - component: {fileID: 8360656361809135450}
+  - component: {fileID: 3343564271004259739}
   m_Layer: 0
   m_Name: Smaller Pins
   m_TagString: Pins
@@ -86,29 +86,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &7903174346993312548
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7913252033669993346}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.30001634
-  m_Height: 1.7279067
-  m_Direction: 1
-  m_Center: {x: 0.000000014901161, y: 0.86395335, z: 0}
 --- !u!54 &2589976363299972608
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -149,3 +126,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uprightThreshold: 3
+--- !u!64 &3343564271004259739
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7913252033669993346}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6849795856638667086, guid: 2a8f41496eec82b47a2d649ebce3a415, type: 3}
