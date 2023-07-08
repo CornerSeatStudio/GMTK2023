@@ -6,15 +6,19 @@ public class CountUprightCylinders : MonoBehaviour
 {
     private bool countdownStarted=false;
     private float countdownTimer=5f;
+    private bool down;
     public CinemachineVirtualCamera virtualCamera;
     void Update()
     {
+        if (!down)
+        {
+            CheckPins();
+        }
         if (countdownStarted)
         {
             countdownTimer-=Time.deltaTime;
             if (countdownTimer<=0)
             {
-                CheckPins();
                 countdownStarted=false;
             }
         }
@@ -24,9 +28,10 @@ public class CountUprightCylinders : MonoBehaviour
         if (other.gameObject.CompareTag("Ball")) 
         {
             countdownStarted=true;
-            countdownTimer=5f;
+            countdownTimer=1f;
             virtualCamera.Follow=null;
             virtualCamera.LookAt=null;
+            down = true;
         }
     }
 
@@ -49,6 +54,7 @@ public class CountUprightCylinders : MonoBehaviour
         if (uprightCount==0)
         {
             Debug.Log("Down");
+            down = true;
         }
         else
         {

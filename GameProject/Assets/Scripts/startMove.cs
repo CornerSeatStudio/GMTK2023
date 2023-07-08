@@ -13,6 +13,7 @@ public class StartMove : MonoBehaviour
     public GameObject ball;
     private bool following = false;
     private bool launched = false;
+    public CameraTargetBevahior cameraTarget;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,8 +34,9 @@ public class StartMove : MonoBehaviour
             rb.AddTorque(torqueDirection * spinForce, ForceMode.Impulse);
             if (!following && Input.GetKeyDown(KeyCode.Space))
         {
-                virtualCamera.Follow = ball.transform;
-                virtualCamera.LookAt = ball.transform;
+                // virtualCamera.Follow = ball.transform;
+                // virtualCamera.LookAt = ball.transform;
+                cameraTarget.SetToTarget(gameObject);
                 following = true;
                 launched = true;
             }
