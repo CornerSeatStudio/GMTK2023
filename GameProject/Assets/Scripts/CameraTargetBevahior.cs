@@ -8,8 +8,11 @@ public class CameraTargetBevahior : MonoBehaviour
     public GameObject trackingTarget;
     public GameObject leftBound;
     public GameObject rightBound;
+    public GameObject upperBound;
+    public GameObject lowerBound;
     public float movespeed;
     public Transform startingTransform;
+    public bool isOrtho = false;
 
     void Awake()
     {
@@ -39,6 +42,28 @@ public class CameraTargetBevahior : MonoBehaviour
                     transform.position += new Vector3(0f, 0f, movespeed * Time.deltaTime);
                 }
             }
+            if (Input.GetKey(KeyCode.W))
+            {
+                print("wmove");
+                if (transform.position.x > upperBound.transform.position.x)
+                {
+                    print("wmove");
+                    transform.position -= new Vector3(movespeed * Time.deltaTime, 0f, 0f);
+                }
+            }
+            if (Input.GetKey(KeyCode.S))
+            {
+                print("Smove");
+                if (transform.position.x < lowerBound.transform.position.x)
+                {
+                    print("Smove");
+                    transform.position += new Vector3(movespeed * Time.deltaTime, 0f, 0f);
+                }
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            ToggleOrtho();
         }
     }
     public void SetToTarget(GameObject target){
@@ -50,5 +75,19 @@ public class CameraTargetBevahior : MonoBehaviour
         trackingTarget = null;
         transform.position = startingTransform.position;
         transform.rotation = startingTransform.rotation; 
+    }
+
+    public void ToggleOrtho()
+    {
+        Camera.main.orthographic = !isOrtho;
+        isOrtho = !isOrtho;
+        if (isOrtho)
+        {
+            transform.rotation = Quaternion.Euler(35f, -120f, 0f);
+        }
+        else
+        {
+            transform.rotation = Quaternion.Euler(35f, -90f, 0f);
+        }
     }
 }
