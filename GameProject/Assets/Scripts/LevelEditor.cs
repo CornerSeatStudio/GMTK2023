@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net;
 using UnityEditor.PackageManager.Requests;
 using UnityEngine;
@@ -31,6 +32,16 @@ public class LevelEditor : MonoBehaviour {
             p.gameObject.SetActive(false);
         }
 
+    }
+
+    public void AllToInactive()
+    {
+        while(placedPlaceables.Count > 0)
+        {
+            Placeable p = placedPlaceables.First();
+            XToActive(p);
+            ActiveToInactive();
+        }
     }
 
     public void ActiveToInactive()
