@@ -13,6 +13,8 @@ public class MainMenuUI : MonoBehaviour
     public Image fadeObject;
 
     public GameObject click;
+    public bool isPaused;
+    public bool activeOnEscape;
     
     
     // Start is called before the first frame update
@@ -29,6 +31,21 @@ public class MainMenuUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (activeOnEscape)
+        {
+            if (Input.GetKeyDown(KeyCode.Escape) && !isPaused)
+            {
+                Pause();
+            }
+            else
+            {
+                if (Input.GetKeyDown(KeyCode.Escape) && isPaused)
+                {
+                    Resume();
+                }
+            }
+        }
+        
     }
     public void RestartGame(){
         Instantiate(click, Vector3.zero, Quaternion.identity);
@@ -40,6 +57,7 @@ public class MainMenuUI : MonoBehaviour
 
     public void Resume(){
         Instantiate(click, Vector3.zero, Quaternion.identity);
+        isPaused = false;
         Time.timeScale=1f;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
@@ -49,6 +67,7 @@ public class MainMenuUI : MonoBehaviour
     }
     public void Pause(){
         Instantiate(click, Vector3.zero, Quaternion.identity);
+            isPaused = true;
             targetUI.SetActive(true);
             Time.timeScale=0f;
             Cursor.visible = true;
@@ -82,5 +101,17 @@ public class MainMenuUI : MonoBehaviour
         
         
     }
-    
+
+    public void ClearedLevel()
+    {
+        Instantiate(click, Vector3.zero, Quaternion.identity);
+        
+        targetUI.SetActive(true);
+        Time.timeScale = 0f;
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+
+        //print("pause called");
+    }
+
 }
