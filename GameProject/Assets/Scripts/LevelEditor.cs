@@ -72,8 +72,8 @@ public class LevelEditor : MonoBehaviour {
         if (Physics.Raycast(castPoint, out hit, Mathf.Infinity, ignoreFloor))
         {
 
-            Vector3 placePos = hit.point; //todo adjust placepos height
-            activePlaceable.transform.position = hit.point;
+            Vector3 placePos = hit.point + Vector3.up * activePlaceable.heightOffset; //todo adjust placepos height
+            activePlaceable.transform.position = placePos;
         }
     }
 

@@ -12,6 +12,7 @@ public class Placeable : MonoBehaviour
 
     [Header("Props")]
     public Sprite spriteIcon;
+    [Range(-10f, 10f)] public float heightOffset = 0f;
 
     [Header("Info")]
     public bool inEditor = true;
