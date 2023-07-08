@@ -56,6 +56,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: gutter Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 076b955d799b2894ea3272c29b9c5458, type: 3}
+      propertyPath: m_TagString
+      value: Gutter
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -64,7 +68,7 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1347253424264151118}
   m_SourcePrefab: {fileID: 100100000, guid: 076b955d799b2894ea3272c29b9c5458, type: 3}
---- !u!1 &2194112871179009311 stripped
+--- !u!1 &2237385924807906129 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 076b955d799b2894ea3272c29b9c5458, type: 3}
   m_PrefabInstance: {fileID: 1426976380350852608}
@@ -75,8 +79,8 @@ MeshCollider:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2194112871179009311}
-  m_Material: {fileID: 0}
+  m_GameObject: {fileID: 2237385924807906129}
+  m_Material: {fileID: 13400000, guid: ed471f1046404d243b3c1fc4e97e2e1e, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
