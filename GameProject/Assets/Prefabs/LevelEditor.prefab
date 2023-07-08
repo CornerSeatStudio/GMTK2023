@@ -30,7 +30,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6022022928372240712
 MonoBehaviour:
@@ -44,7 +44,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99031392ab26e284caa4f5d5ecead447, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelPlaceables: []
+  levelPlaceables:
+  - {fileID: 5531215258146223930, guid: c67c62f09e9755e4dbc5cb1326096319, type: 3}
+  - {fileID: 1550588545201279029, guid: f107d87110be1cf4cba81b7e0727becd, type: 3}
+  - {fileID: 2597876849315164502, guid: 462baeeb55e0cb342a0fee60bfc2d99a, type: 3}
+  - {fileID: 5531215258146223930, guid: c67c62f09e9755e4dbc5cb1326096319, type: 3}
+  - {fileID: 5531215258146223930, guid: c67c62f09e9755e4dbc5cb1326096319, type: 3}
+  - {fileID: 1550588545201279029, guid: f107d87110be1cf4cba81b7e0727becd, type: 3}
   hotbarredPlaceables: []
   activePlaceable: {fileID: 0}
   placedPlaceables: []
