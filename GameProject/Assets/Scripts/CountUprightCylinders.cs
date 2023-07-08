@@ -12,9 +12,9 @@ public class CountUprightCylinders : MonoBehaviour
 
         foreach (GameObject Pin in Pins)
         {
-            isUpright uprightCheck = Pin.GetComponent<isUpright>();
+            IsUpright uprightCheck = Pin.GetComponent<IsUpright>();
 
-            if (uprightCheck!=null&&uprightCheck.IsUpright())
+            if (uprightCheck!=null&&uprightCheck.CheckUpright())
             {
                 uprightCount++;
             }

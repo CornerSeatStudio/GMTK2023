@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
-public class startMove : MonoBehaviour
+public class StartMove : MonoBehaviour
 {
     public Rigidbody rb;
     public float launchForce=10f;
