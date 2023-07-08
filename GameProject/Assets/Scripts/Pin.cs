@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IsUpright : MonoBehaviour
+public class Pin : MonoBehaviour
 {
     public float uprightThreshold=1f;
 
