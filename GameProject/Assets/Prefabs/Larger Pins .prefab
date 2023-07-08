@@ -35,7 +35,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7916675576534229214
 MeshFilter:
@@ -44,7 +44,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1064906773242300109}
-  m_Mesh: {fileID: 6849795856638667086, guid: 2a8f41496eec82b47a2d649ebce3a415, type: 3}
+  m_Mesh: {fileID: 6849795856638667086, guid: b9b52793819c6c34c92cb5848fce232a, type: 3}
 --- !u!23 &8166143900280732966
 MeshRenderer:
   m_ObjectHideFlags: 0
