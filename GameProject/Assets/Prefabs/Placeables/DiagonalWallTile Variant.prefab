@@ -10,7 +10,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: f1e7d94cddfe4474eb18484ad9630b89, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f1e7d94cddfe4474eb18484ad9630b89, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f1e7d94cddfe4474eb18484ad9630b89, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f1e7d94cddfe4474eb18484ad9630b89, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f1e7d94cddfe4474eb18484ad9630b89, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18,7 +30,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f1e7d94cddfe4474eb18484ad9630b89, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f1e7d94cddfe4474eb18484ad9630b89, type: 3}
       propertyPath: m_LocalPosition.z
@@ -105,7 +117,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5112276166194671540}
   serializedVersion: 4
-  m_Mass: 200
+  m_Mass: 50
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -136,8 +148,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3766faf85c07d345b6d8c583a13fdea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  col: {fileID: 0}
+  col: {fileID: 138942061061128783}
   spriteIcon: {fileID: 0}
-  heightOffset: 0.1
+  heightOffset: 0.7
   inEditor: 1
   <CanPlace>k__BackingField: 1

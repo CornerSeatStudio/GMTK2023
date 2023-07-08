@@ -9,7 +9,7 @@ public class StartMove : MonoBehaviour
     public float spinForce=1f;
     public float collisionForce = 2f;
     public float gutterForce = 10f;
-    public CinemachineVirtualCamera virtualCamera;
+ //   public CinemachineVirtualCamera virtualCamera;
     public GameObject ball;
     public GameObject EditModeUI;
     public GameObject PlayModeUI;
