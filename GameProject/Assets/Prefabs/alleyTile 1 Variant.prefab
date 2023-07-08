@@ -56,6 +56,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: alleyTile 1 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 153290df5e2075c45a05201a06d328be, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -64,7 +68,7 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 2808628796472567520}
   m_SourcePrefab: {fileID: 100100000, guid: 153290df5e2075c45a05201a06d328be, type: 3}
---- !u!1 &3043070862399052721 stripped
+--- !u!1 &3123598529739539655 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 153290df5e2075c45a05201a06d328be, type: 3}
   m_PrefabInstance: {fileID: 2853076001557313942}
@@ -75,7 +79,7 @@ MeshCollider:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3043070862399052721}
+  m_GameObject: {fileID: 3123598529739539655}
   m_Material: {fileID: 13400000, guid: ed471f1046404d243b3c1fc4e97e2e1e, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
