@@ -10,7 +10,7 @@ public class ObjectResetter : MonoBehaviour
     
     private LevelEditor levelEditor;
     private TransformData initBallTransform;
-    private Dictionary<GameObject, TransformData> resetTransformData;
+    private Dictionary<GameObject, TransformData> resetTransformData = new();
 
     struct TransformData
     {
@@ -48,7 +48,10 @@ public class ObjectResetter : MonoBehaviour
 
     public void OnReset()
     {
-        ball.GetComponent<Rigidbody>().useGravity = false;
+        var rb = ball.GetComponent<Rigidbody>();
+        rb.isKinematic = true;
+    
+
         ball.transform.position = initBallTransform.position;
         ball.transform.rotation = initBallTransform.rotation;
 

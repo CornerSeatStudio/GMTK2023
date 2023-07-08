@@ -11,7 +11,8 @@ public class StartMove : MonoBehaviour
     public float gutterForce = 10f;
     public CinemachineVirtualCamera virtualCamera;
     public GameObject ball;
-    public GameObject UIObject;
+    public GameObject EditModeUI;
+    public GameObject PlayModeUI;
     private bool following = false;
     private bool launched = false;
     public CameraTargetBevahior cameraTarget;
@@ -20,7 +21,7 @@ public class StartMove : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
 
-        rb.useGravity = false;
+        rb.isKinematic = true;
     }
 
     // Update is called once per frame
@@ -28,7 +29,7 @@ public class StartMove : MonoBehaviour
     {
         if (!launched && Input.GetKeyDown(KeyCode.Space))
         {
-            rb.useGravity = true;
+            rb.isKinematic = false;
 
             Vector3 torqueDirection = transform.right;
             rb.AddForce(Vector3.forward * launchForce, ForceMode.Impulse);
@@ -40,7 +41,8 @@ public class StartMove : MonoBehaviour
                 cameraTarget.SetToTarget(gameObject);
                 following = true;
                 launched = true;
-                UIObject.SetActive(false);
+                EditModeUI.SetActive(false);
+                PlayModeUI.SetActive(true);
             }
         }
     }
