@@ -7,18 +7,18 @@ public class StartMove : MonoBehaviour
     public Rigidbody rb;
     public float launchForce=10f;
     public float spinForce=1f;
-    public float collisionForce = 2f;
-    public float gutterForce = 10f;
+    public float collisionForce=2f;
+    public float gutterForce=10f;
     public CinemachineVirtualCamera virtualCamera;
     public GameObject ball;
-    private bool following = false;
-    private bool launched = false;
+    private bool following=false;
+    private bool launched=false;
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        rb=GetComponent<Rigidbody>();
 
-        rb.useGravity = false;
+        rb.useGravity=false;
     }
 
     // Update is called once per frame
@@ -26,17 +26,17 @@ public class StartMove : MonoBehaviour
     {
         if (!launched && Input.GetKeyDown(KeyCode.Space))
         {
-            rb.useGravity = true;
+            rb.useGravity=true;
 
-            Vector3 torqueDirection = transform.right;
+            Vector3 torqueDirection=transform.right;
             rb.AddForce(Vector3.forward * launchForce, ForceMode.Impulse);
             rb.AddTorque(torqueDirection * spinForce, ForceMode.Impulse);
             if (!following && Input.GetKeyDown(KeyCode.Space))
         {
-                virtualCamera.Follow = ball.transform;
-                virtualCamera.LookAt = ball.transform;
-                following = true;
-                launched = true;
+                virtualCamera.Follow=ball.transform;
+                virtualCamera.LookAt=ball.transform;
+                following=true;
+                launched=true;
             }
         }
     }
@@ -44,7 +44,7 @@ public class StartMove : MonoBehaviour
     {
         if (collision.gameObject.tag == "Gutter")
         {
-            Vector3 initialGutterForce = new Vector3(-1, -1, 0) * collisionForce;
+            Vector3 initialGutterForce=new Vector3(-1, -1, 0) * collisionForce;
             rb.AddForce(initialGutterForce, ForceMode.Impulse);
             Debug.Log("In");
         }
@@ -53,7 +53,7 @@ public class StartMove : MonoBehaviour
     {
         if (collision.gameObject.tag == "Gutter")
         {
-            Vector3 constantGutterForce = new Vector3(0, 0, 1) * gutterForce; 
+            Vector3 constantGutterForce=new Vector3(0, 0, 1) * gutterForce; 
             rb.AddForce(constantGutterForce);
         }
     }
