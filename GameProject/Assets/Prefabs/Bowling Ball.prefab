@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5880728173473690736}
   - component: {fileID: 5609567927828095349}
   m_Layer: 0
-  m_Name: Bowling Ball 1
+  m_Name: Bowling Ball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4565522774111330983}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.32, z: -4.45}
+  m_LocalPosition: {x: -3.1, y: 2.84, z: -5.69}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -133,7 +133,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!114 &5609567927828095349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,3 +149,7 @@ MonoBehaviour:
   rb: {fileID: 5880728173473690736}
   launchForce: 20
   spinForce: 9
+  collisionForce: 2
+  gutterForce: 10
+  virtualCamera: {fileID: 0}
+  ball: {fileID: 4565522774111330983}
