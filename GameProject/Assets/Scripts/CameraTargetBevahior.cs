@@ -13,6 +13,7 @@ public class CameraTargetBevahior : MonoBehaviour
     public float movespeed;
     public Transform startingTransform;
     public bool isOrtho = false;
+    public GameObject background;
 
     void Awake()
     {
@@ -84,10 +85,12 @@ public class CameraTargetBevahior : MonoBehaviour
         if (isOrtho)
         {
             transform.rotation = Quaternion.Euler(35f, -120f, 0f);
+            background.transform.localScale = new Vector3(1.143641f, 9f, 9f);
         }
         else
         {
             transform.rotation = Quaternion.Euler(35f, -90f, 0f);
+            background.transform.localScale = new Vector3(4.574565f, 9f, 9f);
         }
     }
 }
