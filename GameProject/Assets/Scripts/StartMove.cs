@@ -13,7 +13,7 @@ public class StartMove : MonoBehaviour
     public GameObject ball;
     public GameObject EditModeUI;
     public GameObject PlayModeUI;
-    private bool launched = false;
+    public bool launched = false;
     public CameraTargetBevahior cameraTarget;
 
     private LevelEditor levelEditor;
