@@ -51,7 +51,7 @@ public class StartMove : MonoBehaviour
         rb.AddTorque(torqueDirection * spinForce, ForceMode.Impulse);
 
 
-        cameraTarget.SetToTarget(gameObject);
+        //cameraTarget.SetToTarget(gameObject);
         launched = true;
         EditModeUI.SetActive(false);
         PlayModeUI.SetActive(true);
