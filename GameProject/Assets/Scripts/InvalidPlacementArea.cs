@@ -6,7 +6,7 @@ using UnityEngine;
 public class InvalidPlacementArea : MonoBehaviour
 {
     private BoxCollider m_Collider;
-
+    public bool NoPinsOnly;
     private void Awake()
     {
         m_Collider = GetComponent<BoxCollider>();
