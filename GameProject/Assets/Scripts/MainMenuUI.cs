@@ -87,7 +87,7 @@ public class MainMenuUI : MonoBehaviour
         yield return new WaitForSeconds(0.02f);
         //print("start coroutine");
         if(fadeTimer<1f){
-            print(fadeTimer);
+            //print(fadeTimer);
             fadeTimer+=0.02f;
             fadeObject.color= new Color(fadeObject.color.r, fadeObject.color.g, fadeObject.color.b, fadeObject.color.a + 0.02f);
             StartCoroutine(FadeBlackStart(scene));
