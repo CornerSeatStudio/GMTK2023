@@ -2,7 +2,7 @@ Shader "Unlit/CharacterShader"
 {
     Properties
     {
-        _MainTex("Texture", 2D) = "white" {}
+        _MainTex2("Texture", 2D) = "white" {}
         _Color("color", Color) = (.25, .5, .5, 1)
         _ShadowColor("Shadow Color", Color) = (.25, .5, .5, 1)
 
@@ -25,7 +25,7 @@ Shader "Unlit/CharacterShader"
                 #include "Lighting.cginc"
                 #include "AutoLight.cginc"
 
-                sampler2D _MainTex;
+                sampler2D _MainTex2;
                 float4 _MainTex_ST;
                 float4 _Color;
                 float4 _ShadowColor;
@@ -69,7 +69,7 @@ Shader "Unlit/CharacterShader"
 
 
 
-                    return outputColor * tex2D(_MainTex, i.uv);
+                    return outputColor * tex2D(_MainTex2, i.uv);
                 }
                 ENDCG
             }
