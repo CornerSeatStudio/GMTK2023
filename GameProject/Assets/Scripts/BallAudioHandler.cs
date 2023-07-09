@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(StartMove))]
+[RequireComponent(typeof(BallMovement))]
 public class BallAudioHandler : MonoBehaviour
 {
     public AudioClip rollStart;
@@ -10,13 +10,13 @@ public class BallAudioHandler : MonoBehaviour
     //public AudioClip bangPin;
     public float stopClipSpeedThreshold = 1f;
     private AudioSource m_AudioSource;
-    private StartMove ball;
+    private BallMovement ball;
     private Rigidbody rb;
 
 
     private void Awake()
     {
-        ball = GetComponent<StartMove>();
+        ball = GetComponent<BallMovement>();
         rb = GetComponent<Rigidbody>();
         m_AudioSource = GetComponent<AudioSource>();
     }

@@ -2137,6 +2137,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3671466894141264089, guid: 442faff5eb579af4aa6c535ee0f917ac, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7808510860722395850, guid: 442faff5eb579af4aa6c535ee0f917ac, type: 3}
       propertyPath: m_Name
       value: Pins
