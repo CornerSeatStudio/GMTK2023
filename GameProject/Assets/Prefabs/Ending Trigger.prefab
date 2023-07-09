@@ -119,7 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 871ce97bc760d5849a9a3fd4d2889aaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noPinsLeftTimeout: 1
+  noPinsLeftTimeout: 2.5
   WinModeUI: {fileID: 0}
   winSound: {fileID: 2367437972823934842, guid: d3d206eca95335e47b44e5936ed9e787, type: 3}
   clapping: {fileID: 2367437972823934842, guid: ad501851009e9ae47af76a5632ffa56b, type: 3}
