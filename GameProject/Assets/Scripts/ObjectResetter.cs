@@ -5,7 +5,7 @@ using UnityEngine;
 public class ObjectResetter : MonoBehaviour
 {
     [Header("DRAG THINGS YOU WANT TO RESET HERE")]
-    public StartMove ball;
+    public BallMovement ball;
     public List<Pin> nonPlaceablePins;
     
     private LevelEditor levelEditor;

@@ -4,7 +4,7 @@ using UnityEngine;
 using Cinemachine;
 using System;
 
-public class StartMove : MonoBehaviour
+public class BallMovement : MonoBehaviour
 {
     public Rigidbody rb;
     public float launchForce=10f;

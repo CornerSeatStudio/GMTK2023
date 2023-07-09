@@ -11,7 +11,7 @@ public class CountUprightCylinders : MonoBehaviour
 
     private List<Pin> uprightPins;
     private List<Pin> fallenPins; //todo may use in future
-    private StartMove ball;
+    private BallMovement ball;
     public GameObject WinModeUI;
     private void OnEnable()
     {
@@ -25,7 +25,7 @@ public class CountUprightCylinders : MonoBehaviour
 
     private void Awake()
     {
-        ball = FindObjectOfType<StartMove>();
+        ball = FindObjectOfType<BallMovement>();
     }
 
     void OnPlay() //triggers when ball launched
