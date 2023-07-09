@@ -1727,6 +1727,10 @@ PrefabInstance:
       propertyPath: gutterForce
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 5609567927828095349, guid: 16f606f3631cd5d4cb9324cd0e3e22d5, type: 3}
+      propertyPath: objectToHide
+      value: 
+      objectReference: {fileID: 188936144}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
