@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 069f5153d8638ef428d35c2ee18e4095
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Planet Comic
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 3482df1d8a033b24a89e6e725398b09b, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
