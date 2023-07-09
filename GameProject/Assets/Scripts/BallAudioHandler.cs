@@ -8,7 +8,7 @@ public class BallAudioHandler : MonoBehaviour
     public AudioClip rollStart;
     public AudioClip rollDuring;
     //public AudioClip bangPin;
-    public float stopClipSpeedThreshold = 1f;
+    public Vector2 pitchTickRange = new(0.7f, 1.5f);
     private AudioSource m_AudioSource;
     private BallMovement ball;
     private Rigidbody rb;
@@ -68,6 +68,8 @@ public class BallAudioHandler : MonoBehaviour
         m_AudioSource.Play();
     }
 
-    
-    
+
+
+
+
 }
