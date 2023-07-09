@@ -1091,13 +1091,17 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6022022928372240712, guid: d6c84ac0f36b9b646859f14807826793, type: 3}
+      propertyPath: levelPlaceables.Array.data[0]
+      value: 
+      objectReference: {fileID: 8253172254808058551, guid: 1031abb84a7c44245bc93ea7976e760b, type: 3}
+    - target: {fileID: 6022022928372240712, guid: d6c84ac0f36b9b646859f14807826793, type: 3}
       propertyPath: levelPlaceables.Array.data[1]
       value: 
       objectReference: {fileID: 5531215258146223930, guid: c67c62f09e9755e4dbc5cb1326096319, type: 3}
     - target: {fileID: 6022022928372240712, guid: d6c84ac0f36b9b646859f14807826793, type: 3}
       propertyPath: levelPlaceables.Array.data[2]
       value: 
-      objectReference: {fileID: 5531215258146223930, guid: c67c62f09e9755e4dbc5cb1326096319, type: 3}
+      objectReference: {fileID: 3327369794555334219, guid: 3a4eeef0179487e4a893d55f76c4f4f1, type: 3}
     - target: {fileID: 6022022928372240712, guid: d6c84ac0f36b9b646859f14807826793, type: 3}
       propertyPath: levelPlaceables.Array.data[3]
       value: 
@@ -1578,6 +1582,14 @@ PrefabInstance:
     - {fileID: 1620036514535668558, guid: e5f4eb5971bf5de4a87aabb8ccfe5744, type: 3}
     - {fileID: 3345673577199839695, guid: e5f4eb5971bf5de4a87aabb8ccfe5744, type: 3}
     - {fileID: 5536997072836187027, guid: e5f4eb5971bf5de4a87aabb8ccfe5744, type: 3}
+    - {fileID: 5341772691026337409, guid: e5f4eb5971bf5de4a87aabb8ccfe5744, type: 3}
+    - {fileID: 6531327051754618995, guid: e5f4eb5971bf5de4a87aabb8ccfe5744, type: 3}
+    - {fileID: 6178724837938353483, guid: e5f4eb5971bf5de4a87aabb8ccfe5744, type: 3}
+    - {fileID: 4983275887584814200, guid: e5f4eb5971bf5de4a87aabb8ccfe5744, type: 3}
+    - {fileID: 2052404109766069469, guid: e5f4eb5971bf5de4a87aabb8ccfe5744, type: 3}
+    - {fileID: 4157361429501627331, guid: e5f4eb5971bf5de4a87aabb8ccfe5744, type: 3}
+    - {fileID: 3048501358151001399, guid: e5f4eb5971bf5de4a87aabb8ccfe5744, type: 3}
+    - {fileID: 6431279340853341771, guid: e5f4eb5971bf5de4a87aabb8ccfe5744, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 7256281949412126699, guid: e5f4eb5971bf5de4a87aabb8ccfe5744, type: 3}
       insertIndex: -1
@@ -2405,7 +2417,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5754031703222577708, guid: 59990cc94b6921a4aad9fb23fcb2fbf8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 37.4065
+      value: 41.66
       objectReference: {fileID: 0}
     - target: {fileID: 5754031703222577708, guid: 59990cc94b6921a4aad9fb23fcb2fbf8, type: 3}
       propertyPath: m_LocalRotation.w
