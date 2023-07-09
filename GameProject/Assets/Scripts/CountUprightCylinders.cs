@@ -73,7 +73,7 @@ public class CountUprightCylinders : MonoBehaviour
         //ball in gutter, check for win
         if (other.gameObject.CompareTag("Ball")) 
         {
-            CheckPins();
+            ResetPins();
         }
     }
 
@@ -84,20 +84,16 @@ public class CountUprightCylinders : MonoBehaviour
         WinModeUI.SetActive(true);
         //scene management here
     }
+
+
+    void ResetPins()
+    {
+        Debug.Log($"Upright remaining: {uprightPins.Count}, resetting");
+
+    }
     void nextLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
-    void CheckPins()
-    { 
 
-        if (uprightPins.Count == 0)
-        {
-            OnWin();
-        }
-        else
-        {
-            Debug.Log("Uprigh remaining" + uprightPins.Count);
-        }
-    }
 }
