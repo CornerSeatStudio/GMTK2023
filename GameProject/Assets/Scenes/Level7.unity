@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.6229919, g: 0.71671546, b: 0.87179804, a: 1}
+  m_IndirectSpecularColor: {r: 0.6240434, g: 0.7171575, b: 0.8812288, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -141,6 +141,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3822407672676043195, guid: a15d9fee75a690048989fedd2b8b519c, type: 3}
+      propertyPath: speedForce
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 6082018905961496873, guid: a15d9fee75a690048989fedd2b8b519c, type: 3}
       propertyPath: m_Name
       value: speedPad (4) Variant (3)
@@ -820,6 +824,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3822407672676043195, guid: a15d9fee75a690048989fedd2b8b519c, type: 3}
+      propertyPath: speedForce
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 6082018905961496873, guid: a15d9fee75a690048989fedd2b8b519c, type: 3}
       propertyPath: m_Name
       value: speedPad (4) Variant (2)
@@ -2833,6 +2841,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3822407672676043195, guid: a15d9fee75a690048989fedd2b8b519c, type: 3}
+      propertyPath: speedForce
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 6082018905961496873, guid: a15d9fee75a690048989fedd2b8b519c, type: 3}
       propertyPath: m_Name
       value: speedPad (4) Variant (1)
@@ -3150,6 +3162,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3822407672676043195, guid: a15d9fee75a690048989fedd2b8b519c, type: 3}
+      propertyPath: speedForce
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 6082018905961496873, guid: a15d9fee75a690048989fedd2b8b519c, type: 3}
       propertyPath: m_Name
       value: speedPad (4) Variant
@@ -4738,6 +4754,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3822407672676043195, guid: a15d9fee75a690048989fedd2b8b519c, type: 3}
+      propertyPath: speedForce
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 6082018905961496873, guid: a15d9fee75a690048989fedd2b8b519c, type: 3}
       propertyPath: m_Name
       value: speedPad (4) Variant (4)
