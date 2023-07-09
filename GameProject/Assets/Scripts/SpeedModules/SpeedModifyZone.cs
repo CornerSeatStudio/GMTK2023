@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 [RequireComponent(typeof(Collider))]
-public class SpeedModifyZone : MonoBehaviour
+public abstract class SpeedModifyZone : MonoBehaviour
 {
     private Collider m_Collider;
 
@@ -21,12 +21,13 @@ public class SpeedModifyZone : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        //if(other.TryGetComponent<>)
+        if (other.TryGetComponent<BallMovement>(out BallMovement ball)){
+            Debug.Log("SHAGGA");
+            DoTheMagic(ball);
+        }
     }
 
 
-    protected void DoTheMagic()
-    {
+    protected abstract void DoTheMagic(BallMovement ball);
 
-    }
 }
