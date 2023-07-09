@@ -7,7 +7,8 @@ public class ObjectResetter : MonoBehaviour
     [Header("DRAG THINGS YOU WANT TO RESET HERE")]
     public BallMovement ball;
     public List<Pin> nonPlaceablePins;
-    
+    public GameObject objectToHide;
+
     private LevelEditor levelEditor;
     private TransformData initBallTransform;
     private Dictionary<GameObject, TransformData> resetTransformData = new();
@@ -69,8 +70,11 @@ public class ObjectResetter : MonoBehaviour
     {
         var rb = ball.GetComponent<Rigidbody>();
         rb.isKinematic = true;
-    
 
+        SpriteRenderer spriteRenderer = objectToHide.GetComponent<SpriteRenderer>();
+
+        spriteRenderer.enabled = true;
+        
         ball.transform.position = initBallTransform.position;
         ball.transform.rotation = initBallTransform.rotation;
         ball.GetComponent<BallMovement>().launched = false;
