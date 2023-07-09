@@ -55,13 +55,18 @@ public class CountUprightCylinders : MonoBehaviour
         won = false;
         while(uprightPins.Count > 0) //track pins when they fall down
         {
-            List<Pin> newFallenPins = uprightPins.Where(item => !item.IsUpright()).ToList();
-            if (newFallenPins != null) {
-                newFallenPins.ForEach(pin => pin.audioSouce.Play());
+            List<Pin> newFallenPins = uprightPins.Where(item => !item.IsUpright()).ToList(); // check for fallen pins
+            if (newFallenPins != null) { 
                 uprightPins.RemoveAll(item => !item.IsUpright());
                 fallenPins.AddRange(newFallenPins);
             }
 
+            //check for pins that miraculously stand up on their own again
+            List<Pin> newUprightPins = fallenPins.Where(item => item.IsUpright()).ToList(); // check for fallen pins
+            if (newUprightPins != null) { 
+                fallenPins.RemoveAll(item => item.IsUpright());
+                uprightPins.AddRange(newUprightPins);
+            }
             yield return new WaitForEndOfFrame();
         }
 

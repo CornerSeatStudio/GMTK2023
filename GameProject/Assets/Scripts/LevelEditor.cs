@@ -19,7 +19,12 @@ public class LevelEditor : MonoBehaviour {
     public List<Placeable> placedPlaceables = new List<Placeable>();
 
     private int floorLayer = 1 << 3;
+    private BallMovement ball;
 
+    private void Awake()
+    {
+        ball = FindObjectOfType<BallMovement>();
+    }
 
     void Start()
     {
@@ -112,7 +117,7 @@ public class LevelEditor : MonoBehaviour {
 
         }
 
-        if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
+        if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject() && !ball.launched)
         {
             if (activePlaceable == null)
             {
