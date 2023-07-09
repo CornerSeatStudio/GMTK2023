@@ -2792,6 +2792,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ball: {fileID: 1187545815}
   nonPlaceablePins: []
+  objectToHide: {fileID: 188936144}
 --- !u!4 &553955565
 Transform:
   m_ObjectHideFlags: 0
