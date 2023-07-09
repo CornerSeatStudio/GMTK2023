@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3766faf85c07d345b6d8c583a13fdea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteIcon: {fileID: 21300000, guid: aa5bce6368f40a84593b2dfbfd4219db, type: 3}
+  spriteIcon: {fileID: 21300000, guid: 9fd73d2e1f342fe4a8deb2f083bb7b2b, type: 3}
   heightOffset: 0.7
   inEditor: 1
   <CanPlace>k__BackingField: 1

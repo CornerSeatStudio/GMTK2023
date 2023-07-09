@@ -19,6 +19,8 @@ public class HotbarSlot : MonoBehaviour, IPointerClickHandler
             return;
         }
 
+        hotbarParent.levelEditor.AudioSource.PlayOneShot(hotbarParent.levelEditor.OnSelect);
+
         if(placeable == hotbarParent.levelEditor.activePlaceable)
         {
             //BUG HERE
