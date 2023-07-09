@@ -84,13 +84,7 @@ public class BallMovement : MonoBehaviour
     }
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "invis")
-        {
-            MeshRenderer meshRenderer = collision.gameObject.GetComponent<MeshRenderer>();
 
-            Debug.Log("invis");
-            meshRenderer.enabled = false;
-        }
         if (collision.gameObject.tag == "Gutter")
         {
             Vector3 initialGutterForce = new Vector3(-1, -1, 0) * collisionForce;
@@ -99,6 +93,7 @@ public class BallMovement : MonoBehaviour
         }
 
     }
+
     void OnCollisionStay(Collision collision)
     {
         if (collision.gameObject.tag == "Gutter")
