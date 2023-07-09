@@ -1586,6 +1586,11 @@ PrefabInstance:
     - {fileID: 1620036514535668558, guid: e5f4eb5971bf5de4a87aabb8ccfe5744, type: 3}
     - {fileID: 3345673577199839695, guid: e5f4eb5971bf5de4a87aabb8ccfe5744, type: 3}
     - {fileID: 5536997072836187027, guid: e5f4eb5971bf5de4a87aabb8ccfe5744, type: 3}
+    - {fileID: 6666285610121365091, guid: e5f4eb5971bf5de4a87aabb8ccfe5744, type: 3}
+    - {fileID: 2537198589363041317, guid: e5f4eb5971bf5de4a87aabb8ccfe5744, type: 3}
+    - {fileID: 2474568886705249153, guid: e5f4eb5971bf5de4a87aabb8ccfe5744, type: 3}
+    - {fileID: 7707203556927999038, guid: e5f4eb5971bf5de4a87aabb8ccfe5744, type: 3}
+    - {fileID: 2449508210978013908, guid: e5f4eb5971bf5de4a87aabb8ccfe5744, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 7256281949412126699, guid: e5f4eb5971bf5de4a87aabb8ccfe5744, type: 3}
       insertIndex: -1
@@ -2677,7 +2682,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 88284756100228083, guid: b9ad82a928c160e49935535a8b6e4b81, type: 3}
       propertyPath: speedForce
-      value: 50
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 4378824969380137843, guid: b9ad82a928c160e49935535a8b6e4b81, type: 3}
       propertyPath: m_RootOrder
