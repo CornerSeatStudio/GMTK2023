@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
+
 
 [RequireComponent(typeof(Collider))]
 public class Placeable : MonoBehaviour
@@ -54,6 +56,7 @@ public class Placeable : MonoBehaviour
     }
 
 
+    HashSet<Collider> colliders = new HashSet<Collider>();
     //todo invalid placement area neads kinematic rb
     private void OnTriggerEnter(Collider other)
     {
@@ -61,34 +64,48 @@ public class Placeable : MonoBehaviour
         {
             if (invalidArea.NoPinsOnly)
             {
-                if(TryGetComponent<Pin>(out _))
+                if (TryGetComponent<Pin>(out _))
                 {
                     CanPlace = false;
                     if (invalidMat != null)
                         mr.material = invalidMat;
+                    colliders.Add(other);
+                } else
+                {
+                    //a non pin entered a only pin zone
                 }
-                
+
             } else
             {
+
+                //Debug.Log("entering any?");
                 CanPlace = false;
                 if (invalidMat != null)
                     mr.material = invalidMat;
+                colliders.Add(other);
             }
 
-           
-            //todo change color?
+
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.TryGetComponent<InvalidPlacementArea>(out _))
+        if (other.TryGetComponent<InvalidPlacementArea>(out InvalidPlacementArea invalidArea))
         {
-            CanPlace = true;
-            mr.material = ogMat;
 
+            colliders.Remove(other);
+            if(colliders.Count == 0) {
+                CanPlace = true;
+                mr.material = ogMat;
+            }
+
+            
+            
+            
 
         }
+
     }
 
 }
