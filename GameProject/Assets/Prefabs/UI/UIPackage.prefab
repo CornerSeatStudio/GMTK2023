@@ -32,7 +32,7 @@ Transform:
   - {fileID: 7329371380527298406}
   - {fileID: 3387511818464738970}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4215203040767327372
 MonoBehaviour:
@@ -270,6 +270,14 @@ PrefabInstance:
       propertyPath: targetUI
       value: 
       objectReference: {fileID: 7657472017748639099}
+    - target: {fileID: 2078764955458815564, guid: 33f84144ccd4eed44a9f44477fd3a928, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2078764955458815567, guid: 33f84144ccd4eed44a9f44477fd3a928, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2078764956063693200, guid: 33f84144ccd4eed44a9f44477fd3a928, type: 3}
       propertyPath: m_fontSize
       value: 24
@@ -356,7 +364,7 @@ PrefabInstance:
       objectReference: {fileID: 8196425667892186477}
     - target: {fileID: 2078764957117629792, guid: 33f84144ccd4eed44a9f44477fd3a928, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Level3
+      value: Level2
       objectReference: {fileID: 0}
     - target: {fileID: 2078764957117629793, guid: 33f84144ccd4eed44a9f44477fd3a928, type: 3}
       propertyPath: m_SizeDelta.x
@@ -388,7 +396,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5587485197748866891, guid: 33f84144ccd4eed44a9f44477fd3a928, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6457972206294607368, guid: 33f84144ccd4eed44a9f44477fd3a928, type: 3}
       propertyPath: m_RootOrder

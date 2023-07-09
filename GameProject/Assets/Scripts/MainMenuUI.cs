@@ -77,19 +77,22 @@ public class MainMenuUI : MonoBehaviour
     }
 
     public void StartGame(string scene){
+        Time.timeScale = 1f;
         Instantiate(click, Vector3.zero, Quaternion.identity);
         Debug.Log("test");
-        fadeObject.gameObject.SetActive(true);
+        fadeObject.enabled = true; 
         //print("start game");
         StartCoroutine(FadeBlackStart(scene));
-        Time.timeScale=1f;
+        
     }
     IEnumerator FadeBlackStart(string scene){
         yield return new WaitForSeconds(0.02f);
         //print("start coroutine");
         if(fadeTimer<1f){
             //print(fadeTimer);
-            fadeTimer+=0.02f;
+            print(fadeObject.color.a);
+            fadeTimer +=0.02f;
+
             fadeObject.color= new Color(fadeObject.color.r, fadeObject.color.g, fadeObject.color.b, fadeObject.color.a + 0.02f);
             StartCoroutine(FadeBlackStart(scene));
         }
