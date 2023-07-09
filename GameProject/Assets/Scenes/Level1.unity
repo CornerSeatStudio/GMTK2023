@@ -1568,6 +1568,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UIPackage
       objectReference: {fileID: 0}
+    - target: {fileID: 4257928746098300889, guid: 47850424985465e43b5a9bcdf2748e40, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7657472019170680541, guid: 47850424985465e43b5a9bcdf2748e40, type: 3}
       propertyPath: m_Color.a
       value: 1
