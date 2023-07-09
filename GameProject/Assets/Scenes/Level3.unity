@@ -1843,7 +1843,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 309784352863431195, guid: e5f4eb5971bf5de4a87aabb8ccfe5744, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 44.25
+      value: 35.25
       objectReference: {fileID: 0}
     - target: {fileID: 506209308508630304, guid: e5f4eb5971bf5de4a87aabb8ccfe5744, type: 3}
       propertyPath: m_Layer
@@ -2095,6 +2095,8 @@ PrefabInstance:
     - {fileID: 6410045780018614590, guid: e5f4eb5971bf5de4a87aabb8ccfe5744, type: 3}
     - {fileID: 9116148738254020411, guid: e5f4eb5971bf5de4a87aabb8ccfe5744, type: 3}
     - {fileID: 7662944007230438930, guid: e5f4eb5971bf5de4a87aabb8ccfe5744, type: 3}
+    - {fileID: 984875671922139424, guid: e5f4eb5971bf5de4a87aabb8ccfe5744, type: 3}
+    - {fileID: 8828376099922468348, guid: e5f4eb5971bf5de4a87aabb8ccfe5744, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 1739163763345411582, guid: e5f4eb5971bf5de4a87aabb8ccfe5744, type: 3}
       insertIndex: -1
