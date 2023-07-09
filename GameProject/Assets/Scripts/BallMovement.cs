@@ -95,11 +95,11 @@ public class BallMovement : MonoBehaviour
     void Update()
     {
   
-        if (!launched && Input.GetKeyDown(KeyCode.Space))
-        {
+        //if (!launched && Input.GetKeyDown(KeyCode.Space))
+        //{
 
-            OnSendLeBall();
-        }
+        //    OnSendLeBall();
+        //}
     }
     void OnCollisionEnter(Collision collision)
     {
