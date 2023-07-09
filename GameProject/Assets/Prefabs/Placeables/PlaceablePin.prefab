@@ -138,7 +138,7 @@ PrefabInstance:
     - target: {fileID: 4846798135597617273, guid: 442faff5eb579af4aa6c535ee0f917ac, type: 3}
       propertyPath: fallenSoundEffect
       value: 
-      objectReference: {fileID: 8300000, guid: f5245d3550658834d9ed41449942e1f3, type: 3}
+      objectReference: {fileID: 8300000, guid: 9442d57604ee7d94caca399a10194748, type: 3}
     - target: {fileID: 7808510860722395850, guid: 442faff5eb579af4aa6c535ee0f917ac, type: 3}
       propertyPath: m_Name
       value: PlaceablePin

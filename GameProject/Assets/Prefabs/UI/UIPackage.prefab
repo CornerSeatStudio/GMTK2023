@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1123547827122996296}
+  - component: {fileID: 4215203040767327372}
   m_Layer: 0
   m_Name: UIPackage
   m_TagString: Untagged
@@ -33,6 +34,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4215203040767327372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581609688323852769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79f478a15df3e1b4cbb0a10beb654545, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenu: {fileID: 996900335714215574}
+  winConMenu: {fileID: 4257928746098300889}
 --- !u!1001 &1548463063306341280
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -126,6 +141,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 884136665c868b545b3ff3b7e998cab1, type: 3}
+--- !u!1 &996900335714215574 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1776825502469106998, guid: 884136665c868b545b3ff3b7e998cab1, type: 3}
+  m_PrefabInstance: {fileID: 1548463063306341280}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7329371380527298406 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8127333232376970438, guid: 884136665c868b545b3ff3b7e998cab1, type: 3}
@@ -150,6 +170,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1123547827122996296}
     m_Modifications:
+    - target: {fileID: 1566906330038637604, guid: 33f84144ccd4eed44a9f44477fd3a928, type: 3}
+      propertyPath: targetUI
+      value: 
+      objectReference: {fileID: 4257928746098300889}
     - target: {fileID: 2078764956108220559, guid: 33f84144ccd4eed44a9f44477fd3a928, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -162,13 +186,17 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 8196425667892186477}
+    - target: {fileID: 2078764957117629792, guid: 33f84144ccd4eed44a9f44477fd3a928, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Level3
+      objectReference: {fileID: 0}
     - target: {fileID: 5587485197748866891, guid: 33f84144ccd4eed44a9f44477fd3a928, type: 3}
       propertyPath: m_Name
       value: WinConMet
       objectReference: {fileID: 0}
     - target: {fileID: 5587485197748866891, guid: 33f84144ccd4eed44a9f44477fd3a928, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6457972206294607368, guid: 33f84144ccd4eed44a9f44477fd3a928, type: 3}
       propertyPath: m_RootOrder
@@ -222,5 +250,10 @@ PrefabInstance:
 --- !u!4 &3387511818464738970 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6457972206294607368, guid: 33f84144ccd4eed44a9f44477fd3a928, type: 3}
+  m_PrefabInstance: {fileID: 8547145501048182930}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4257928746098300889 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5587485197748866891, guid: 33f84144ccd4eed44a9f44477fd3a928, type: 3}
   m_PrefabInstance: {fileID: 8547145501048182930}
   m_PrefabAsset: {fileID: 0}
