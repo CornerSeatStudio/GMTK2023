@@ -277,6 +277,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1920984098}
     - target: {fileID: 5609567927828095349, guid: 16f606f3631cd5d4cb9324cd0e3e22d5, type: 3}
+      propertyPath: PinCheckUI
+      value: 
+      objectReference: {fileID: 1093223700}
+    - target: {fileID: 5609567927828095349, guid: 16f606f3631cd5d4cb9324cd0e3e22d5, type: 3}
       propertyPath: PlayModeUI
       value: 
       objectReference: {fileID: 2142733351}
@@ -645,6 +649,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1093223700 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5269602155359283997, guid: c2479b7158b0278459ffb45753fe3a94, type: 3}
+  m_PrefabInstance: {fileID: 1519068115}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1202016304 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7549745334202173828, guid: cc844ff0ffb053c45b20c10c80d3296c, type: 3}
@@ -955,11 +964,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3187874120396073491, guid: a777bb49f2111fa45a7e428a79d95880, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 19.07
+      value: -3.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 3511184567632370275, guid: a777bb49f2111fa45a7e428a79d95880, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -20.4
       objectReference: {fileID: 0}
     - target: {fileID: 4085003812870463144, guid: a777bb49f2111fa45a7e428a79d95880, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.0000009536743
+      value: 0.0000019073486
       objectReference: {fileID: 0}
     - target: {fileID: 4127576832290617598, guid: a777bb49f2111fa45a7e428a79d95880, type: 3}
       propertyPath: m_Name
