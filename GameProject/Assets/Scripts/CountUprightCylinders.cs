@@ -35,6 +35,7 @@ public class CountUprightCylinders : MonoBehaviour
 
     void OnPlay() //triggers when ball launched
     {
+        Time.timeScale = 1f;
         GameObject[] pins = GameObject.FindGameObjectsWithTag("Pins");
         uprightPins = pins.Select(pin => pin.GetComponent<Pin>()).ToList();
         fallenPins = new();
@@ -101,6 +102,7 @@ public class CountUprightCylinders : MonoBehaviour
         Instantiate(winSound, Vector3.zero, Quaternion.identity);
         Instantiate(clapping, Vector3.zero, Quaternion.identity);
         WinModeUI.SetActive(true);
+        Time.timeScale = 0f;
         //scene management here
     }
 
