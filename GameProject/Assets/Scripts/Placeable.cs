@@ -20,6 +20,8 @@ public class Placeable : MonoBehaviour
     [Header("Info")]
     public bool inEditor = true;
 
+    public Quaternion InitRot { get; private set; }
+
     [field: SerializeField] public bool CanPlace { get; private set;  } = true;
 
     private void Awake()
@@ -30,6 +32,13 @@ public class Placeable : MonoBehaviour
         ogMat = mr.material;
         invalidMat = FindObjectOfType<LevelEditor>().invalidMat;
     }
+
+    private void Start()
+    {
+        InitRot = transform.rotation;
+    }
+
+
 
     private void Update()
     {

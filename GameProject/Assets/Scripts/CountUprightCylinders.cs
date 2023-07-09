@@ -75,7 +75,9 @@ public class CountUprightCylinders : MonoBehaviour
         won = true;
         //at this point, no pins left standing
         yield return new WaitForSeconds(noPinsLeftTimeout);
-        OnWin(); //todo this might trigger twice, once at all pins down, second in gutter
+
+        if(ball.launched) //early reset dumbass
+            OnWin(); 
 
     }
 

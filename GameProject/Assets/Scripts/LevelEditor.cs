@@ -17,6 +17,7 @@ public class LevelEditor : MonoBehaviour {
     public AudioClip OnPlace;
     public AudioClip OnPickUp;
     public AudioClip OnSelect;
+    public AudioClip OnInvalidClick;
 
     [Header("Info")]
     public List<Placeable> hotbarredPlaceables = new List<Placeable>();
@@ -80,6 +81,7 @@ public class LevelEditor : MonoBehaviour {
         {
             AudioSource.PlayOneShot(OnPickUp, 0.2f);
             hotbarredPlaceables.Add(placeable);
+            placeable.transform.rotation = placeable.InitRot;
         }
 
         placeable.inEditor = true;
@@ -151,6 +153,9 @@ public class LevelEditor : MonoBehaviour {
                 }
                 
 
+            } else
+            {
+                AudioSource.PlayOneShot(OnInvalidClick, 0.3f);
             }
         }
     }
