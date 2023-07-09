@@ -4355,6 +4355,7 @@ GameObject:
   - component: {fileID: 2060911377440242588}
   - component: {fileID: 8866404356461713488}
   - component: {fileID: 6632371888335382524}
+  - component: {fileID: 8270392160390853066}
   m_Layer: 5
   m_Name: HelpOpen
   m_TagString: Untagged
@@ -4477,6 +4478,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8270392160390853066}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: MakeSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &6632371888335382524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4490,6 +4503,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 4188187282804341370}
+--- !u!114 &8270392160390853066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6174642638492253535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 105f64a00060dbc4189f27c77a9429a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound: {fileID: 1372561931589356285, guid: c99afa3ab97d3f842bd7747088cf7e59, type: 3}
 --- !u!1 &6249914167631174667
 GameObject:
   m_ObjectHideFlags: 0
@@ -4596,6 +4622,7 @@ GameObject:
   - component: {fileID: 2653401544181431485}
   - component: {fileID: 3535675888572663864}
   - component: {fileID: 110345977295997645}
+  - component: {fileID: 6096486809546913476}
   m_Layer: 5
   m_Name: X
   m_TagString: Untagged
@@ -4718,6 +4745,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 6096486809546913476}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: MakeSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &110345977295997645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4731,6 +4770,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 4188187282804341370}
+--- !u!114 &6096486809546913476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6330573741844593028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 105f64a00060dbc4189f27c77a9429a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound: {fileID: 1372561931589356285, guid: c99afa3ab97d3f842bd7747088cf7e59, type: 3}
 --- !u!1 &6435784487057022747
 GameObject:
   m_ObjectHideFlags: 0
