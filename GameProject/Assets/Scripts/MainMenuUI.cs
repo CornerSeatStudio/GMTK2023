@@ -78,6 +78,7 @@ public class MainMenuUI : MonoBehaviour
 
     public void StartGame(string scene){
         Instantiate(click, Vector3.zero, Quaternion.identity);
+        Debug.Log("test");
         fadeObject.gameObject.SetActive(true);
         //print("start game");
         StartCoroutine(FadeBlackStart(scene));
