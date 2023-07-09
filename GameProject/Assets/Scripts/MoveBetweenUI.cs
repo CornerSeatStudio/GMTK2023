@@ -6,6 +6,7 @@ public class MoveBetweenUI : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject otherUI;
+    public GameObject sound;
     void Start()
     {
         
@@ -19,6 +20,7 @@ public class MoveBetweenUI : MonoBehaviour
 
     public void SwitchUI()
     {
+        Instantiate(sound, Vector3.zero, Quaternion.identity);
         otherUI.SetActive(true);
         gameObject.SetActive(false);
     }
