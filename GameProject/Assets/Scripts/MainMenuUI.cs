@@ -59,8 +59,8 @@ public class MainMenuUI : MonoBehaviour
         Instantiate(click, Vector3.zero, Quaternion.identity);
         isPaused = false;
         Time.timeScale=1f;
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.visible = false;
+        //Cursor.lockState = CursorLockMode.Locked;
         targetUI.SetActive(false);
         //uiManager.canPause=true;
         //print("resume called");
@@ -70,8 +70,8 @@ public class MainMenuUI : MonoBehaviour
             isPaused = true;
             targetUI.SetActive(true);
             Time.timeScale=0f;
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
+            //Cursor.visible = true;
+            //Cursor.lockState = CursorLockMode.None;
             
             //print("pause called");
     }
@@ -108,8 +108,8 @@ public class MainMenuUI : MonoBehaviour
         
         targetUI.SetActive(true);
         Time.timeScale = 0f;
-        Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.None;
+        //Cursor.visible = true;
+        //Cursor.lockState = CursorLockMode.None;
 
         //print("pause called");
     }
