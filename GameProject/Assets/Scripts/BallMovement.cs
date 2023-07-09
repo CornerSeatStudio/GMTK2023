@@ -44,6 +44,8 @@ public class BallMovement : MonoBehaviour
     public void OnSendLeBall()
     {
 
+        Debug.Log("LAUNCHED");
+
 
         //are all pins placed?
         if (levelEditor != null && !levelEditor.AreAllPinsPlaced())

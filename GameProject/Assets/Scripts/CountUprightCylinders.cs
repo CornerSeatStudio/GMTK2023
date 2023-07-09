@@ -73,6 +73,9 @@ public class CountUprightCylinders : MonoBehaviour
         }
 
         won = true;
+
+        ball.cameraTarget.SetToTarget(null); //dont snap camera
+
         //at this point, no pins left standing
         yield return new WaitForSeconds(noPinsLeftTimeout);
 
