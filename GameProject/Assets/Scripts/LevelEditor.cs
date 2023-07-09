@@ -13,6 +13,11 @@ public class LevelEditor : MonoBehaviour {
     [Range(0.01f, 100f)] public float rotationSpeed = 40f;
     public Material invalidMat;
 
+    [Header("AUDIO")]
+    public AudioClip OnPlace;
+    public AudioClip OnPickUp;
+    public AudioClip OnSelect;
+
     [Header("Info")]
     public List<Placeable> hotbarredPlaceables = new List<Placeable>();
     public Placeable activePlaceable;
@@ -20,9 +25,11 @@ public class LevelEditor : MonoBehaviour {
 
     private int floorLayer = 1 << 3;
     private BallMovement ball;
+    public AudioSource AudioSource { get; private set; }
 
     private void Awake()
     {
+        AudioSource = GetComponent<AudioSource>();
         ball = FindObjectOfType<BallMovement>();
     }
 
@@ -71,6 +78,7 @@ public class LevelEditor : MonoBehaviour {
 
         if (placedPlaceables.Remove(placeable))
         {
+            AudioSource.PlayOneShot(OnPickUp, 0.2f);
             hotbarredPlaceables.Add(placeable);
         }
 
@@ -81,6 +89,7 @@ public class LevelEditor : MonoBehaviour {
 
     public void ActiveToFixed()
     {
+        AudioSource.PlayOneShot(OnPlace, 0.75f);
         placedPlaceables.Add(activePlaceable);
         hotbarredPlaceables.Remove(activePlaceable);
         activePlaceable.inEditor = false;
