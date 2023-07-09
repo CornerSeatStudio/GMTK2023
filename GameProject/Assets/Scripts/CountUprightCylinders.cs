@@ -14,8 +14,10 @@ public class CountUprightCylinders : MonoBehaviour
     private BallMovement ball;
     private ObjectResetter resetter;
     public GameObject WinModeUI;
+    public RectTransform StrikeUI;
     public GameObject winSound;
     public GameObject clapping;
+    public float StrikeUIOffset = 400f;
     private void OnEnable()
     {
         ball.OnPlayEvent += OnPlay;
@@ -76,15 +78,33 @@ public class CountUprightCylinders : MonoBehaviour
 
         ball.cameraTarget.SetToTarget(null); //dont snap camera
 
+        float t = 0;
+        Vector3 targetPos = StrikeUI.localPosition + Vector3.down * StrikeUIOffset;
+        while (t < noPinsLeftTimeout)
+        {
+            StrikeUI.localPosition = Spring(StrikeUI.localPosition, targetPos, t * .1f);
+            t += Time.deltaTime;
+            yield return new WaitForEndOfFrame();
+        }
+
         //at this point, no pins left standing
-        yield return new WaitForSeconds(noPinsLeftTimeout);
 
         if(ball.launched) //early reset dumbass
             OnWin(); 
 
     }
 
+    float Spring(float from, float to, float time)
+    {
+        time = Mathf.Clamp01(time);
+        time = (Mathf.Sin(time * Mathf.PI * (.2f + 2.5f * time * time * time)) * Mathf.Pow(1f - time, 2.2f) + time) * (1f + (1.2f * (1f - time)));
+        return from + (to - from) * time;
+    }
 
+    Vector3 Spring(Vector3 from, Vector3 to, float time)
+    {
+        return new Vector3(Spring(from.x, to.x, time), Spring(from.y, to.y, time), Spring(from.z, to.z, time));
+    }
 
     void OnTriggerEnter(Collider other)
     {
