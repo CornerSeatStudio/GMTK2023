@@ -15,6 +15,7 @@ public class BallMovement : MonoBehaviour
     public GameObject ball;
     public GameObject EditModeUI;
     public GameObject PlayModeUI;
+    public GameObject PinCheckUI;
     public bool launched = false;
     public CameraTargetBevahior cameraTarget;
     public GameObject objectToHide;
@@ -47,10 +48,16 @@ public class BallMovement : MonoBehaviour
         //are all pins placed?
         if (levelEditor != null && !levelEditor.AreAllPinsPlaced())
         {
-            Debug.Log("NOT ALL PINS ARE PLACED, FLASH A UI THING HERE");
+            if(PinCheckUI != null)
+                PinCheckUI.SetActive(true);
+
 
             return;
         }
+
+        if (PinCheckUI != null)
+            PinCheckUI.SetActive(false);
+
 
         cameraTarget.SetToTarget(this.gameObject);
 
