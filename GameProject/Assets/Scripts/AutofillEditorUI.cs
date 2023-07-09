@@ -16,9 +16,18 @@ public class AutofillEditorUI : MonoBehaviour
     {
         resetter = FindObjectOfType<ObjectResetter>();
         editor = FindObjectOfType<LevelEditor>();
-        clear.onClick.AddListener(editor.AllToInactive);
-        play.onClick.AddListener(resetter.OnPlay);
-        reset.onClick.AddListener(resetter.OnReset);
+        if (editor)
+        {
+            clear.onClick.AddListener(editor.AllToInactive);
+        }
+
+        if(resetter)
+        {
+            play.onClick.AddListener(resetter.OnPlay);
+            reset.onClick.AddListener(resetter.OnReset);
+        }
+        
+        
     }
 
     // Update is called once per frame
