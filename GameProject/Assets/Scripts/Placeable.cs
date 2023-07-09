@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Collider))]
-[RequireComponent(typeof(Rigidbody))]
 public class Placeable : MonoBehaviour
 {
 
@@ -35,13 +34,18 @@ public class Placeable : MonoBehaviour
     private void Update()
     {
         col.isTrigger = inEditor;
-        rb.isKinematic = inEditor;
+        if(rb != null)
+        {
+            rb.isKinematic = inEditor;
+        }
         if (!inEditor)
         {
             mr.material = ogMat;
         }
     }
 
+
+    //todo invalid placement area neads kinematic rb
     private void OnTriggerEnter(Collider other)
     {
         if(other.TryGetComponent<InvalidPlacementArea>(out _))
