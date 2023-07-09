@@ -119,6 +119,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1190490583464628319, guid: 442faff5eb579af4aa6c535ee0f917ac, type: 3}
+      propertyPath: m_Pitch
+      value: 1.88
+      objectReference: {fileID: 0}
     - target: {fileID: 3671466894141264089, guid: 442faff5eb579af4aa6c535ee0f917ac, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -134,7 +138,7 @@ PrefabInstance:
     - target: {fileID: 4846798135597617273, guid: 442faff5eb579af4aa6c535ee0f917ac, type: 3}
       propertyPath: fallenSoundEffect
       value: 
-      objectReference: {fileID: 8300000, guid: bba05bc87f5868440a7921e2a18659bf, type: 3}
+      objectReference: {fileID: 8300000, guid: f5245d3550658834d9ed41449942e1f3, type: 3}
     - target: {fileID: 7808510860722395850, guid: 442faff5eb579af4aa6c535ee0f917ac, type: 3}
       propertyPath: m_Name
       value: PlaceablePin
