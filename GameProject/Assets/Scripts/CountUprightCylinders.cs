@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class CountUprightCylinders : MonoBehaviour
 {
 
-    public float noPinsLeftTimeout = 1f;
+    public float noPinsLeftTimeout = 2f;
 
     private List<Pin> uprightPins;
     private List<Pin> fallenPins; //todo may use in future
@@ -116,4 +116,5 @@ public class CountUprightCylinders : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
+    
 }
