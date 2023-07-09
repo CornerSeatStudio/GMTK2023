@@ -91,7 +91,7 @@ public class LevelEditor : MonoBehaviour {
     {
         Ray castPoint = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
-        if (Physics.Raycast(castPoint, out hit, Mathf.Infinity, floorLayer))
+        if (Physics.Raycast(castPoint, out hit, Mathf.Infinity, floorLayer)) //placeable layer
         {
 
             Vector3 placePos = hit.point + Vector3.up * activePlaceable.heightOffset; //todo adjust placepos height
@@ -108,8 +108,8 @@ public class LevelEditor : MonoBehaviour {
         if (activePlaceable != null)
         {
             MoveActiveToMousePos();
-            int rotationDir = Input.GetKey(KeyCode.Q) ? 1 : 0;
-            rotationDir += Input.GetKey(KeyCode.E) ? -1 : 0;
+            int rotationDir = Input.GetKey(KeyCode.Q) ? -1 : 0;
+            rotationDir += Input.GetKey(KeyCode.E) ? 1 : 0;
             if (rotationDir != 0) {
 
                 activePlaceable.transform.Rotate(rotationDir * Vector3.up * rotationSpeed * Time.deltaTime, Space.World);

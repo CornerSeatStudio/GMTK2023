@@ -48,11 +48,25 @@ public class Placeable : MonoBehaviour
     //todo invalid placement area neads kinematic rb
     private void OnTriggerEnter(Collider other)
     {
-        if(other.TryGetComponent<InvalidPlacementArea>(out _))
+        if(other.TryGetComponent<InvalidPlacementArea>(out InvalidPlacementArea invalidArea))
         {
-            CanPlace = false;
-            if (invalidMat != null)
-                mr.material = invalidMat;
+            if (invalidArea.NoPinsOnly)
+            {
+                if(TryGetComponent<Pin>(out _))
+                {
+                    CanPlace = false;
+                    if (invalidMat != null)
+                        mr.material = invalidMat;
+                }
+                
+            } else
+            {
+                CanPlace = false;
+                if (invalidMat != null)
+                    mr.material = invalidMat;
+            }
+
+           
             //todo change color?
         }
     }
