@@ -5,8 +5,12 @@ using UnityEngine;
 [RequireComponent(typeof(Collider))]
 public class InvalidPlacementArea : MonoBehaviour
 {
-    public BoxCollider m_Collider;
+    private BoxCollider m_Collider;
 
+    private void Awake()
+    {
+        m_Collider = GetComponent<BoxCollider>();
+    }
 
     private void OnDrawGizmos()
     {

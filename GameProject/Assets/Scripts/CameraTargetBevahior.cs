@@ -11,13 +11,13 @@ public class CameraTargetBevahior : MonoBehaviour
     public GameObject upperBound;
     public GameObject lowerBound;
     public float movespeed;
-    public Transform startingTransform;
+    private Vector3 startPos;
     public bool isOrtho = false;
     public GameObject background;
 
     void Awake()
     {
-        startingTransform = transform;
+        startPos = transform.position;
     }
     void Start()
     {
@@ -74,8 +74,7 @@ public class CameraTargetBevahior : MonoBehaviour
     public void RemoveTarget()
     {
         trackingTarget = null;
-        transform.position = startingTransform.position;
-        transform.rotation = startingTransform.rotation; 
+        transform.position = startPos;
     }
 
     public void ToggleOrtho()

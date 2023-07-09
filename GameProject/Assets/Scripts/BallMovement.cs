@@ -85,10 +85,7 @@ public class BallMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!launched) {
-            cameraTarget.SetToTarget(null);
-        }
-
+  
         if (!launched && Input.GetKeyDown(KeyCode.Space))
         {
 

@@ -71,6 +71,8 @@ public class ObjectResetter : MonoBehaviour
         var rb = ball.GetComponent<Rigidbody>();
         rb.isKinematic = true;
 
+        ball.cameraTarget.RemoveTarget();
+
         SpriteRenderer spriteRenderer = objectToHide.GetComponent<SpriteRenderer>();
 
         spriteRenderer.enabled = true;
