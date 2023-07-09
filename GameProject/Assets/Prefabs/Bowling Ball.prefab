@@ -150,7 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 5880728173473690736}
   launchForce: 100
-  spinForce: 10
+  spinForce: 20
   collisionForce: 2
   gutterForce: 30
   ball: {fileID: 4565522774111330983}

@@ -10,7 +10,7 @@ public class LevelEditor : MonoBehaviour {
     [Header("PLACE LEVEL PLACEABLES HERE")]
     public List<Placeable> levelPlaceables;
 
-    [Range(0.01f, 100f)] public float rotationSpeed = 10f;
+    [Range(0.01f, 100f)] public float rotationSpeed = 40f;
     public Material invalidMat;
 
     [Header("Info")]

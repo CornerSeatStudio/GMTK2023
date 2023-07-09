@@ -1645,7 +1645,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 309784352863431195, guid: e5f4eb5971bf5de4a87aabb8ccfe5744, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 35.5
+      value: 44.75
       objectReference: {fileID: 0}
     - target: {fileID: 1739163763345411582, guid: e5f4eb5971bf5de4a87aabb8ccfe5744, type: 3}
       propertyPath: m_RootOrder
@@ -5306,6 +5306,10 @@ PrefabInstance:
     - target: {fileID: 4186357107628801399, guid: d6c84ac0f36b9b646859f14807826793, type: 3}
       propertyPath: m_Name
       value: LevelEditor
+      objectReference: {fileID: 0}
+    - target: {fileID: 6022022928372240712, guid: d6c84ac0f36b9b646859f14807826793, type: 3}
+      propertyPath: rotationSpeed
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 6022022928372240712, guid: d6c84ac0f36b9b646859f14807826793, type: 3}
       propertyPath: levelPlaceables.Array.size
