@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad5f9aae764ddad4eb9ce792f2ee9c84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallenSoundEffect: {fileID: 8300000, guid: f5245d3550658834d9ed41449942e1f3, type: 3}
+  fallenSoundEffect: {fileID: 8300000, guid: 9442d57604ee7d94caca399a10194748, type: 3}
   uprightThreshold: 3
   audioSouce: {fileID: 0}
 --- !u!64 &3343564271004259739

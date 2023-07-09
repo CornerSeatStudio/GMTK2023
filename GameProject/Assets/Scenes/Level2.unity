@@ -131,10 +131,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 996900335714215574, guid: 47850424985465e43b5a9bcdf2748e40, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1123547827122996296, guid: 47850424985465e43b5a9bcdf2748e40, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -183,13 +179,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: UIPackage
       objectReference: {fileID: 0}
-    - target: {fileID: 4257928746098300889, guid: 47850424985465e43b5a9bcdf2748e40, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
+    - target: {fileID: 7143635404326800566, guid: 47850424985465e43b5a9bcdf2748e40, type: 3}
+      propertyPath: targetUI
+      value: 
+      objectReference: {fileID: 1882181190}
     - target: {fileID: 7657472017373388274, guid: 47850424985465e43b5a9bcdf2748e40, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: Level3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7657472017748639099, guid: 47850424985465e43b5a9bcdf2748e40, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1511,6 +1511,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &1882181190 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7657472017748639099, guid: 47850424985465e43b5a9bcdf2748e40, type: 3}
+  m_PrefabInstance: {fileID: 205706420}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1920984098 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2204510924708816606, guid: c2479b7158b0278459ffb45753fe3a94, type: 3}
