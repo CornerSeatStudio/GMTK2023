@@ -539,6 +539,7 @@ GameObject:
   - component: {fileID: 95864029545950997}
   - component: {fileID: 6922442280294108410}
   - component: {fileID: 7132740565043668173}
+  - component: {fileID: 8270167539828495763}
   m_Layer: 5
   m_Name: ToogleOrtho
   m_TagString: Untagged
@@ -661,6 +662,31 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8270167539828495763}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: MakeSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &8270167539828495763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1844706641098143796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 105f64a00060dbc4189f27c77a9429a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound: {fileID: 1372561931589356285, guid: c99afa3ab97d3f842bd7747088cf7e59, type: 3}
 --- !u!1 &1872641004081570475
 GameObject:
   m_ObjectHideFlags: 0
@@ -932,6 +958,7 @@ GameObject:
   - component: {fileID: 2597430299079066723}
   - component: {fileID: 2133524282770700099}
   - component: {fileID: 8768500984437696698}
+  - component: {fileID: 3435895882328877124}
   m_Layer: 5
   m_Name: Play
   m_TagString: Untagged
@@ -1054,6 +1081,31 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 3435895882328877124}
+        m_TargetAssemblyTypeName: ObjectResetter, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3435895882328877124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2293131283220152952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 105f64a00060dbc4189f27c77a9429a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound: {fileID: 1372561931589356285, guid: c99afa3ab97d3f842bd7747088cf7e59, type: 3}
 --- !u!1 &3149220990492734900
 GameObject:
   m_ObjectHideFlags: 0
@@ -1200,6 +1252,7 @@ GameObject:
   - component: {fileID: 3738849604353393942}
   - component: {fileID: 5413430013804353521}
   - component: {fileID: 6199402279444950244}
+  - component: {fileID: 2109503483033601548}
   m_Layer: 5
   m_Name: Reset
   m_TagString: Untagged
@@ -1322,6 +1375,31 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2109503483033601548}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: MakeSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2109503483033601548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3174179801774765105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 105f64a00060dbc4189f27c77a9429a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound: {fileID: 1372561931589356285, guid: c99afa3ab97d3f842bd7747088cf7e59, type: 3}
 --- !u!1 &3291046646242465967
 GameObject:
   m_ObjectHideFlags: 0
@@ -2192,6 +2270,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4468404699120422849}
+  - component: {fileID: 3520439471667404076}
   m_Layer: 5
   m_Name: PLACEYOURPINS
   m_TagString: Untagged
@@ -2221,6 +2300,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0.000061035156, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 1}
+--- !u!114 &3520439471667404076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5269602155359283997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35ae7811e303e344e841951156c819c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 1285573331573524551}
+  image: {fileID: 1472999659883928768}
 --- !u!1 &5645363842931606285
 GameObject:
   m_ObjectHideFlags: 0
@@ -2571,6 +2664,7 @@ GameObject:
   - component: {fileID: 3205795480404077714}
   - component: {fileID: 944521757507921712}
   - component: {fileID: 8712270256835951888}
+  - component: {fileID: 7491791049068446891}
   m_Layer: 5
   m_Name: Clear
   m_TagString: Untagged
@@ -2693,6 +2787,31 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 7491791049068446891}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: MakeSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &7491791049068446891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6435784487057022747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 105f64a00060dbc4189f27c77a9429a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound: {fileID: 1372561931589356285, guid: c99afa3ab97d3f842bd7747088cf7e59, type: 3}
 --- !u!1 &7655587381750643008
 GameObject:
   m_ObjectHideFlags: 0
@@ -2835,9 +2954,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: PLACE YOUR PINS DUMBASS
+  m_text: Place all your pins to start
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6af6b6a066e816e4fbc63c03a963db16, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2901,6 +3020,6 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
