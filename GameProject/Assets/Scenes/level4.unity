@@ -599,6 +599,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5269602155359283997, guid: c2479b7158b0278459ffb45753fe3a94, type: 3}
   m_PrefabInstance: {fileID: 229429741}
   m_PrefabAsset: {fileID: 0}
+--- !u!224 &229429745 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 932037642589746100, guid: c2479b7158b0278459ffb45753fe3a94, type: 3}
+  m_PrefabInstance: {fileID: 229429741}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &286411351 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8768500984437696698, guid: c2479b7158b0278459ffb45753fe3a94, type: 3}
@@ -1345,6 +1350,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 7793269860777714240, guid: e5f4eb5971bf5de4a87aabb8ccfe5744, type: 3}
+      propertyPath: StrikeUI
+      value: 
+      objectReference: {fileID: 229429745}
     - target: {fileID: 7793269860777714240, guid: e5f4eb5971bf5de4a87aabb8ccfe5744, type: 3}
       propertyPath: WinModeUI
       value: 

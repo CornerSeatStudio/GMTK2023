@@ -947,6 +947,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5269602155359283997, guid: c2479b7158b0278459ffb45753fe3a94, type: 3}
   m_PrefabInstance: {fileID: 344839086}
   m_PrefabAsset: {fileID: 0}
+--- !u!224 &344839090 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 932037642589746100, guid: c2479b7158b0278459ffb45753fe3a94, type: 3}
+  m_PrefabInstance: {fileID: 344839086}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &346101087
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2698,6 +2703,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 7793269860777714240, guid: e5f4eb5971bf5de4a87aabb8ccfe5744, type: 3}
+      propertyPath: StrikeUI
+      value: 
+      objectReference: {fileID: 344839090}
     - target: {fileID: 7793269860777714240, guid: e5f4eb5971bf5de4a87aabb8ccfe5744, type: 3}
       propertyPath: WinModeUI
       value: 
