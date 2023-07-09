@@ -17,6 +17,10 @@ public class CountUprightCylinders : MonoBehaviour
     public RectTransform StrikeUI;
     public GameObject winSound;
     public GameObject clapping;
+
+    public AudioClip[] niceThrows;
+    public AudioClip[] strikes;
+
     public float StrikeUIOffset = 400f;
     private void OnEnable()
     {
@@ -80,6 +84,14 @@ public class CountUprightCylinders : MonoBehaviour
 
         float t = 0;
         Vector3 targetPos = StrikeUI.localPosition + Vector3.down * StrikeUIOffset;
+
+        AudioSource[] sources = StrikeUI.GetComponents<AudioSource>();
+        AudioClip[] soundChoice = UnityEngine.Random.value > 0.5f ? strikes : niceThrows;
+        for(int i = 0; i < soundChoice.Length; ++i)
+        {
+            sources[i].PlayOneShot(soundChoice[i]);
+        }
+
         while (t < noPinsLeftTimeout)
         {
             StrikeUI.localPosition = Spring(StrikeUI.localPosition, targetPos, t * .1f);
