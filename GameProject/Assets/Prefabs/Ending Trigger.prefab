@@ -122,3 +122,4 @@ MonoBehaviour:
   noPinsLeftTimeout: 1
   WinModeUI: {fileID: 0}
   winSound: {fileID: 2367437972823934842, guid: d3d206eca95335e47b44e5936ed9e787, type: 3}
+  clapping: {fileID: 2367437972823934842, guid: ad501851009e9ae47af76a5632ffa56b, type: 3}
