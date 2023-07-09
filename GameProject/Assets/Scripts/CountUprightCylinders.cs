@@ -7,12 +7,14 @@ using UnityEngine.SceneManagement;
 public class CountUprightCylinders : MonoBehaviour
 {
 
-    public float noPinsLeftTimeout = 5f;
+    public float noPinsLeftTimeout = 1f;
 
     private List<Pin> uprightPins;
     private List<Pin> fallenPins; //todo may use in future
     private BallMovement ball;
+    private ObjectResetter resetter;
     public GameObject WinModeUI;
+    public GameObject winSound;
     private void OnEnable()
     {
         ball.OnPlayEvent += OnPlay;
@@ -26,6 +28,8 @@ public class CountUprightCylinders : MonoBehaviour
     private void Awake()
     {
         ball = FindObjectOfType<BallMovement>();
+        resetter = FindObjectOfType<ObjectResetter>();
+
     }
 
     void OnPlay() //triggers when ball launched
@@ -45,8 +49,10 @@ public class CountUprightCylinders : MonoBehaviour
     }
 
     private IEnumerator pinLoop;
+    private bool won = false;
     IEnumerator PinLoop()
     {
+        won = false;
         while(uprightPins.Count > 0) //track pins when they fall down
         {
             List<Pin> newFallenPins = uprightPins.Where(item => !item.IsUpright()).ToList();
@@ -59,6 +65,7 @@ public class CountUprightCylinders : MonoBehaviour
             yield return new WaitForEndOfFrame();
         }
 
+        won = true;
         //at this point, no pins left standing
         yield return new WaitForSeconds(noPinsLeftTimeout);
         OnWin(); //todo this might trigger twice, once at all pins down, second in gutter
@@ -69,6 +76,10 @@ public class CountUprightCylinders : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        if (won)
+        {
+            return;
+        }
 
         //ball in gutter, check for win
         if (other.gameObject.CompareTag("Ball")) 
@@ -81,6 +92,7 @@ public class CountUprightCylinders : MonoBehaviour
     void OnWin()
     {
         Debug.Log("all pins down");
+        Instantiate(winSound, Vector3.zero, Quaternion.identity);
         WinModeUI.SetActive(true);
         //scene management here
     }
@@ -89,6 +101,7 @@ public class CountUprightCylinders : MonoBehaviour
     void ResetPins()
     {
         Debug.Log($"Upright remaining: {uprightPins.Count}, resetting");
+        resetter.OnReset();
 
     }
     void nextLevel()

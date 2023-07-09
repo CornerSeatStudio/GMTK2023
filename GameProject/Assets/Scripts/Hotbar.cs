@@ -8,6 +8,8 @@ public class Hotbar : MonoBehaviour {
     // Start is called before the first frame update
     public LevelEditor levelEditor;
     public HotbarSlot[] slots;
+    public Sprite selectedSlot;
+    public Sprite unselectedSlot;
 
 
     private void Awake()
@@ -17,6 +19,14 @@ public class Hotbar : MonoBehaviour {
     }
 
 
+    private void Start()
+    {
+        //foreach(HotbarSlot slot in slots)
+        //{
+        //    slot.SetInactiveFrame();
+        //}
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -24,15 +34,22 @@ public class Hotbar : MonoBehaviour {
         {
             Placeable p = levelEditor.hotbarredPlaceables.ElementAtOrDefault(i);
             if(p != null)
-            {
+            {             
                 slots[i].UpdateSlot(p);
                 if(p == levelEditor.activePlaceable)
                 {
-                    slots[i].ShowActive();
+                    slots[i].SetActiveFrame();
+                } else
+                {
+                    slots[i].SetInactiveFrame();
                 }
+
+
             } else
             {
                 slots[i].EmptySlot();
+                slots[i].SetInactiveFrame();
+
             }
         }
         

@@ -10,7 +10,8 @@ public class HotbarSlot : MonoBehaviour, IPointerClickHandler
     public Hotbar hotbarParent;
 
     public Placeable placeable;
-    private Image image;
+    private Image frameImage;
+    public Image iconImage;
     public void OnPointerClick(PointerEventData eventData)
     {
         if(eventData.button != 0 || placeable == null)
@@ -21,7 +22,7 @@ public class HotbarSlot : MonoBehaviour, IPointerClickHandler
         if(placeable == hotbarParent.levelEditor.activePlaceable)
         {
             //BUG HERE
-            Debug.Log("BUG?");
+            //Debug.Log("BUG?");
             hotbarParent.levelEditor.ActiveToInactive();
         } else
         {
@@ -33,26 +34,38 @@ public class HotbarSlot : MonoBehaviour, IPointerClickHandler
     private void Awake()
     {
         hotbarParent = GetComponentInParent<Hotbar>();
-        image = GetComponent<Image>();  
+        frameImage = GetComponent<Image>();
+
     }
 
     public void UpdateSlot(Placeable p)
     {
         placeable = p;
         //p.spriteIcon;
-        image.sprite = p.spriteIcon;
+        iconImage.sprite = p.spriteIcon;
         
     }
 
     public void EmptySlot()
     {
         placeable = null;
-        image.sprite = null;
+        iconImage.sprite = null;
 
     }
 
-    public void ShowActive()
+    public void SetActiveFrame()
     {
+        if(frameImage.sprite != hotbarParent.selectedSlot)
+            frameImage.sprite = hotbarParent.selectedSlot;
+    }
+
+    public void SetInactiveFrame()
+    {
+        if (frameImage.sprite != hotbarParent.unselectedSlot)
+            frameImage.sprite = hotbarParent.unselectedSlot;
 
     }
+
+
+
 }

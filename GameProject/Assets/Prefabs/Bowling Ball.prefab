@@ -172,7 +172,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rollStart: {fileID: 8300000, guid: 0c8c9cd53f77bcc44ba8ebbdf5f754af, type: 3}
   rollDuring: {fileID: 8300000, guid: 36660c1a7cfcf804dac0d33e894d10e6, type: 3}
-  bangPin: {fileID: 8300000, guid: 361fd3db0be60054e83eaed01a282902, type: 3}
   stopClipSpeedThreshold: 1
 --- !u!82 &-6798959180059167223
 AudioSource:
@@ -186,7 +185,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.3
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0
