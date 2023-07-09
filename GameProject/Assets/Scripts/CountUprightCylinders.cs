@@ -79,6 +79,7 @@ public class CountUprightCylinders : MonoBehaviour
         }
 
         won = true;
+        ball.PlayModeUI.SetActive(false);
 
         ball.cameraTarget.SetToTarget(null); //dont snap camera
 
