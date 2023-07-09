@@ -119,5 +119,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 871ce97bc760d5849a9a3fd4d2889aaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noPinsLeftTimeout: 5
+  noPinsLeftTimeout: 1
   WinModeUI: {fileID: 0}
+  winSound: {fileID: 2367437972823934842, guid: d3d206eca95335e47b44e5936ed9e787, type: 3}

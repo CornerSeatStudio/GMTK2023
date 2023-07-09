@@ -14,6 +14,7 @@ public class CountUprightCylinders : MonoBehaviour
     private BallMovement ball;
     private ObjectResetter resetter;
     public GameObject WinModeUI;
+    public GameObject winSound;
     private void OnEnable()
     {
         ball.OnPlayEvent += OnPlay;
@@ -91,6 +92,7 @@ public class CountUprightCylinders : MonoBehaviour
     void OnWin()
     {
         Debug.Log("all pins down");
+        Instantiate(winSound, Vector3.zero, Quaternion.identity);
         WinModeUI.SetActive(true);
         //scene management here
     }
