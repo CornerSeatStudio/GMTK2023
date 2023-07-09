@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.6229919, g: 0.71671546, b: 0.87179804, a: 1}
+  m_IndirectSpecularColor: {r: 0.624084, g: 0.71717757, b: 0.8812386, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3318,7 +3318,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Bowling But You're the Pin
+  m_text: Bowling But You are the Pin
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6af6b6a066e816e4fbc63c03a963db16, type: 2}
   m_sharedMaterial: {fileID: -4651927527000232951, guid: 6af6b6a066e816e4fbc63c03a963db16, type: 2}
