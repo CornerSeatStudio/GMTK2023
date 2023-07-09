@@ -133,14 +133,20 @@ public class LevelEditor : MonoBehaviour {
             if (activePlaceable == null)
             {
                 Ray castPoint = Camera.main.ScreenPointToRay(Input.mousePosition);
-                RaycastHit hit;
-                if (Physics.Raycast(castPoint, out hit, Mathf.Infinity))
+                var hits = Physics.RaycastAll(castPoint, Mathf.Infinity);
+                if (hits != null)
                 {
-                    if(hit.collider.TryGetComponent<Placeable>(out Placeable placeable))
+                    Debug.Log($"HIT SOMETHING? {hits.Length}");
+                    foreach (RaycastHit hit in hits)
                     {
-                        //Debug.Log("RAYCASTED");
-                        XToActive(placeable);
+                        if (hit.collider.TryGetComponent<Placeable>(out Placeable placeable))
+                        {
+                            //Debug.Log("RAYCASTED");
+                            XToActive(placeable);
+                        }
                     }
+                    
+                    
                     
                 }
             }
