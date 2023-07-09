@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fallenSoundEffect: {fileID: 8300000, guid: f5245d3550658834d9ed41449942e1f3, type: 3}
-  uprightThreshold: 3
+  uprightThreshold: 10
   audioSouce: {fileID: 0}
 --- !u!64 &3343564271004259739
 MeshCollider:

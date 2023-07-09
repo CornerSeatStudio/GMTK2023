@@ -8,7 +8,7 @@ public class Pin : MonoBehaviour
 {
     public AudioClip fallenSoundEffect;
 
-    public float uprightThreshold=1f; //todo many need to increase
+    public float uprightThreshold=10f; //todo many need to increase
     public AudioSource audioSouce;
 
     
