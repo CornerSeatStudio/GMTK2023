@@ -121,5 +121,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   noPinsLeftTimeout: 2.5
   WinModeUI: {fileID: 0}
+  StrikeUI: {fileID: 0}
   winSound: {fileID: 2367437972823934842, guid: d3d206eca95335e47b44e5936ed9e787, type: 3}
   clapping: {fileID: 2367437972823934842, guid: ad501851009e9ae47af76a5632ffa56b, type: 3}
+  niceThrows:
+  - {fileID: 8300000, guid: fa7dd8f561b592144b1044dccf948b60, type: 3}
+  - {fileID: 8300000, guid: 28258b531b4da35478595b8a5990c9cf, type: 3}
+  - {fileID: 8300000, guid: 10bb864c81a76db4bbeba4a45bcae119, type: 3}
+  - {fileID: 8300000, guid: e6f2fde24766d194699376c7e1ee022e, type: 3}
+  strikes:
+  - {fileID: 8300000, guid: ad10f150b79c3c3488e00848a3faff52, type: 3}
+  - {fileID: 8300000, guid: a3496f5e5a8fb6749abbb27b26522365, type: 3}
+  - {fileID: 8300000, guid: 9de41442aa40a0a489ed58b104edd887, type: 3}
+  - {fileID: 8300000, guid: 24976f6d66638c647a9f25474cb434b0, type: 3}
+  StrikeUIOffset: 400

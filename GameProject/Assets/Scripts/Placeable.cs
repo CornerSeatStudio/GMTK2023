@@ -44,7 +44,10 @@ public class Placeable : MonoBehaviour
 
     private void Update()
     {
-        col.isTrigger = inEditor;
+        col.isTrigger = inEditor || TryGetComponent<SpeedModifyZone>(out _);
+
+        
+
         if(rb != null)
         {
             rb.isKinematic = inEditor;
