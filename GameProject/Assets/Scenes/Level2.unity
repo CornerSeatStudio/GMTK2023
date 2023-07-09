@@ -223,7 +223,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4827703759752559427, guid: 16f606f3631cd5d4cb9324cd0e3e22d5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.717
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4827703759752559427, guid: 16f606f3631cd5d4cb9324cd0e3e22d5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -277,6 +277,10 @@ PrefabInstance:
       propertyPath: cameraTarget
       value: 
       objectReference: {fileID: 1625782530}
+    - target: {fileID: 5609567927828095349, guid: 16f606f3631cd5d4cb9324cd0e3e22d5, type: 3}
+      propertyPath: objectToHide
+      value: 
+      objectReference: {fileID: 831168010}
     - target: {fileID: 5609567927828095349, guid: 16f606f3631cd5d4cb9324cd0e3e22d5, type: 3}
       propertyPath: virtualCamera
       value: 

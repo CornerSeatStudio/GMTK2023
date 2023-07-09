@@ -17,7 +17,7 @@ public class BallMovement : MonoBehaviour
     public GameObject PlayModeUI;
     public bool launched = false;
     public CameraTargetBevahior cameraTarget;
-
+    public GameObject objectToHide;
     private LevelEditor levelEditor;
     private ObjectResetter resetter;
 
@@ -70,6 +70,11 @@ public class BallMovement : MonoBehaviour
         if (PlayModeUI != null)
         {
             PlayModeUI.SetActive(true);
+        }
+        SpriteRenderer spriteRenderer = objectToHide.GetComponent<SpriteRenderer>();
+        if (spriteRenderer != null)
+        {
+            spriteRenderer.enabled = false;
         }
     }
 
