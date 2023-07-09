@@ -1171,6 +1171,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2642699377836440596, guid: c867d625c09e67e45af6ac01db8be292, type: 3}
+      propertyPath: WinModeUI
+      value: 
+      objectReference: {fileID: 7165232146388836333}
+    - target: {fileID: 2642699377836440596, guid: c867d625c09e67e45af6ac01db8be292, type: 3}
       propertyPath: virtualCamera
       value: 
       objectReference: {fileID: 0}
@@ -1295,11 +1299,24 @@ PrefabInstance:
       propertyPath: m_Name
       value: UIPackage
       objectReference: {fileID: 0}
+    - target: {fileID: 4257928746098300889, guid: 47850424985465e43b5a9bcdf2748e40, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7657472017373388274, guid: 47850424985465e43b5a9bcdf2748e40, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Level2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47850424985465e43b5a9bcdf2748e40, type: 3}
+--- !u!1 &7165232146388836333 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4257928746098300889, guid: 47850424985465e43b5a9bcdf2748e40, type: 3}
+  m_PrefabInstance: {fileID: 7165232146388836332}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7881851423825684243
 PrefabInstance:
   m_ObjectHideFlags: 0

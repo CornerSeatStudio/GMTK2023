@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 using System.Linq;
-
+using UnityEngine.SceneManagement;
 public class CountUprightCylinders : MonoBehaviour
 {
 
@@ -12,7 +12,7 @@ public class CountUprightCylinders : MonoBehaviour
     private List<Pin> uprightPins;
     private List<Pin> fallenPins; //todo may use in future
     private StartMove ball;
-
+    public GameObject WinModeUI;
     private void OnEnable()
     {
         ball.OnPlayEvent += OnPlay;
@@ -81,9 +81,13 @@ public class CountUprightCylinders : MonoBehaviour
     void OnWin()
     {
         Debug.Log("all pins down");
+        WinModeUI.SetActive(true);
         //scene management here
     }
-
+    void nextLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
     void CheckPins()
     { 
 
