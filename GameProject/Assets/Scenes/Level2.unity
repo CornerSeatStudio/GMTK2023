@@ -219,7 +219,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4827703759752559427, guid: 16f606f3631cd5d4cb9324cd0e3e22d5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.17
+      value: 3.171
       objectReference: {fileID: 0}
     - target: {fileID: 4827703759752559427, guid: 16f606f3631cd5d4cb9324cd0e3e22d5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -269,6 +269,10 @@ PrefabInstance:
       propertyPath: PlayModeUI
       value: 
       objectReference: {fileID: 2142733351}
+    - target: {fileID: 5609567927828095349, guid: 16f606f3631cd5d4cb9324cd0e3e22d5, type: 3}
+      propertyPath: gutterForce
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 5609567927828095349, guid: 16f606f3631cd5d4cb9324cd0e3e22d5, type: 3}
       propertyPath: cameraTarget
       value: 
@@ -1854,6 +1858,10 @@ PrefabInstance:
       propertyPath: WinModeUI
       value: 
       objectReference: {fileID: 205706421}
+    - target: {fileID: 7807733527894129820, guid: e5f4eb5971bf5de4a87aabb8ccfe5744, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 50.89
+      objectReference: {fileID: 0}
     - target: {fileID: 7856939198205985564, guid: e5f4eb5971bf5de4a87aabb8ccfe5744, type: 3}
       propertyPath: m_Layer
       value: 0
