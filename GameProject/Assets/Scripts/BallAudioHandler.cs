@@ -7,7 +7,7 @@ public class BallAudioHandler : MonoBehaviour
 {
     public AudioClip rollStart;
     public AudioClip rollDuring;
-    public AudioClip bangPin;
+    //public AudioClip bangPin;
     public float stopClipSpeedThreshold = 1f;
     private AudioSource m_AudioSource;
     private StartMove ball;
