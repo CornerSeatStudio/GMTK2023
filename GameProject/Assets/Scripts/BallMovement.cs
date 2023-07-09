@@ -29,6 +29,7 @@ public class BallMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         levelEditor = FindObjectOfType<LevelEditor>();
         resetter = FindObjectOfType<ObjectResetter>();
+        cameraTarget = FindObjectOfType<CameraTargetBevahior>();
     }
 
     void Start()
@@ -42,7 +43,6 @@ public class BallMovement : MonoBehaviour
     public void OnSendLeBall()
     {
 
-        OnPlayEvent?.Invoke();
 
         //are all pins placed?
         if (levelEditor != null && !levelEditor.AreAllPinsPlaced())
@@ -51,6 +51,10 @@ public class BallMovement : MonoBehaviour
 
             return;
         }
+
+        cameraTarget.SetToTarget(this.gameObject);
+
+        OnPlayEvent?.Invoke();
 
         //free the lad
         rb.isKinematic = false;
@@ -81,6 +85,10 @@ public class BallMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!launched) {
+            cameraTarget.SetToTarget(null);
+        }
+
         if (!launched && Input.GetKeyDown(KeyCode.Space))
         {
 
