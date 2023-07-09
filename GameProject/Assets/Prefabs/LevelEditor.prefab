@@ -47,16 +47,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelPlaceables:
   - {fileID: 5531215258146223930, guid: c67c62f09e9755e4dbc5cb1326096319, type: 3}
-  - {fileID: 1550588545201279029, guid: f107d87110be1cf4cba81b7e0727becd, type: 3}
-  - {fileID: 2597876849315164502, guid: 462baeeb55e0cb342a0fee60bfc2d99a, type: 3}
+  - {fileID: 8253172254808058551, guid: 1031abb84a7c44245bc93ea7976e760b, type: 3}
+  - {fileID: 8253172254808058551, guid: 1031abb84a7c44245bc93ea7976e760b, type: 3}
   - {fileID: 5531215258146223930, guid: c67c62f09e9755e4dbc5cb1326096319, type: 3}
   - {fileID: 5531215258146223930, guid: c67c62f09e9755e4dbc5cb1326096319, type: 3}
-  - {fileID: 1550588545201279029, guid: f107d87110be1cf4cba81b7e0727becd, type: 3}
-  rotationSpeed: 10
+  rotationSpeed: 40
   invalidMat: {fileID: 2100000, guid: 679397cfa291d2146a7aff3f907f1699, type: 2}
   OnPlace: {fileID: 8300000, guid: 9fcf8899e28e5284a81bd16836bad199, type: 3}
   OnPickUp: {fileID: 8300000, guid: 50359b550e7d54f429cd314fff056e45, type: 3}
   OnSelect: {fileID: 8300000, guid: 46c3c60edf3c7344989b6aef024b2ed6, type: 3}
+  OnInvalidClick: {fileID: 8300000, guid: 26eabcdbcc67792469144ecdfce50eba, type: 3}
   hotbarredPlaceables: []
   activePlaceable: {fileID: 0}
   placedPlaceables: []
