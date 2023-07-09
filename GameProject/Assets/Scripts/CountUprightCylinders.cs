@@ -2,63 +2,98 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
+using System.Linq;
+
 public class CountUprightCylinders : MonoBehaviour
 {
-    private bool countdownStarted=false;
-    private float countdownTimer=5f;
-    private bool down;
-    //public CinemachineVirtualCamera virtualCamera;
-    void Update()
+
+    public float noPinsLeftTimeout = 5f;
+
+    private List<Pin> uprightPins;
+    private List<Pin> fallenPins; //todo may use in future
+    private StartMove ball;
+
+    private void OnEnable()
     {
-        if (!down)
+        ball.OnPlayEvent += OnPlay;
+    }
+
+    private void OnDisable()
+    {
+        ball.OnPlayEvent -= OnPlay;
+    }
+
+    private void Awake()
+    {
+        ball = FindObjectOfType<StartMove>();
+    }
+
+    void OnPlay() //triggers when ball launched
+    {
+        GameObject[] pins = GameObject.FindGameObjectsWithTag("Pins");
+        uprightPins = pins.Select(pin => pin.GetComponent<Pin>()).ToList();
+        fallenPins = new();
+
+        if(pinLoop != null)
+        {
+            StopCoroutine(pinLoop);
+        }
+
+        pinLoop = PinLoop();
+        StartCoroutine(pinLoop);
+
+    }
+
+    private IEnumerator pinLoop;
+    IEnumerator PinLoop()
+    {
+        while(uprightPins.Count > 0) //track pins when they fall down
+        {
+            List<Pin> newFallenPins = uprightPins.Where(item => !item.IsUpright()).ToList();
+            if (newFallenPins != null) {
+                newFallenPins.ForEach(pin => pin.audioSouce.Play());
+                uprightPins.RemoveAll(item => !item.IsUpright());
+                fallenPins.AddRange(newFallenPins);
+            }
+
+            yield return new WaitForEndOfFrame();
+        }
+
+        //at this point, no pins left standing
+        yield return new WaitForSeconds(noPinsLeftTimeout);
+        OnWin(); //todo this might trigger twice, once at all pins down, second in gutter
+
+    }
+
+
+
+    void OnTriggerEnter(Collider other)
+    {
+
+        //ball in gutter, check for win
+        if (other.gameObject.CompareTag("Ball")) 
         {
             CheckPins();
         }
-        if (countdownStarted)
-        {
-            countdownTimer-=Time.deltaTime;
-            if (countdownTimer<=0)
-            {
-                countdownStarted=false;
-            }
-        }
     }
-    void OnTriggerEnter(Collider other)
+
+
+    void OnWin()
     {
-        if (other.gameObject.CompareTag("Ball")) 
-        {
-            countdownStarted=true;
-            countdownTimer=1f;
-           // virtualCamera.Follow=null;
-           // virtualCamera.LookAt=null;
-            down = true;
-        }
+        Debug.Log("all pins down");
+        //scene management here
     }
 
     void CheckPins()
-    {
-        GameObject[] pins=GameObject.FindGameObjectsWithTag("Pins");
+    { 
 
-        int uprightCount=0;
-
-        foreach (GameObject pin in pins)
+        if (uprightPins.Count == 0)
         {
-            Pin uprightCheck=pin.GetComponent<Pin>();
-
-            if (uprightCheck!=null && uprightCheck.CheckUpright())
-            {
-                uprightCount++;
-            }
-        }
-
-        if (uprightCount==0)
-        {
-            Debug.Log("Down");
-            down = true;
+            OnWin();
         }
         else
         {
-            Debug.Log("Upright: " + uprightCount);
+            Debug.Log("Uprigh remaining" + uprightPins.Count);
         }
     }
 }
